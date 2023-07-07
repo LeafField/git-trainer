@@ -5,6 +5,16 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
+    "@storybook/addon-viewport",
+    // '@storybook/addon-styling',
+    {
+      name: "@storybook/addon-styling",
+      options: {
+        postCss: {
+          implementation: require.resolve("postcss"),
+        },
+      },
+    },
   ],
   framework: {
     name: "@storybook/nextjs",
@@ -13,5 +23,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: "tag",
   },
+  staticDirs: ["../public"],
 };
 export default config;
