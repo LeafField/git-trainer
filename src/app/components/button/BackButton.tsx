@@ -15,7 +15,6 @@ const BackButton = () => {
           alt="トップページに戻るボタン"
           style={{ objectFit: "cover" }}
           fill
-          unoptimized
         />
       </figure>
     </Link>
