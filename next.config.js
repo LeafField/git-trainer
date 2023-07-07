@@ -5,7 +5,7 @@ const nextConfig = {
   },
   output: "export",
   distDir:'/docs',
-  basePath:'/docs'
+  basePath:'/git-trainer'
 };
 
 module.exports = nextConfig;
