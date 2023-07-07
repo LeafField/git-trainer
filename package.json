@@ -38,9 +38,11 @@
     "@storybook/testing-react": "^2.0.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
+    "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-storybook": "^0.6.12",
     "jest": "^29.6.1",
     "jest-environment-jsdom": "^29.6.1",
+    "prettier": "^3.0.0",
     "storybook": "^7.0.26"
   }
 }

@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from '@storybook/react'
-import Button from './Button'
-import { Inter } from 'next/font/google'
+import { Meta, StoryObj } from "@storybook/react";
+import Button from "./Button";
+import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 const meta: Meta<typeof Button> = {
-  title: 'components/Button',
+  title: "components/Button",
   component: Button,
   decorators: [
     (StoryComponents) => (
@@ -14,24 +14,24 @@ const meta: Meta<typeof Button> = {
       </div>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
-type Story = StoryObj<typeof meta>
+type Story = StoryObj<typeof meta>;
 
 export const Primary: Story = {
   args: {
-    color: 'primary',
-    title: 'Let’s Play!',
-    link: '/',
+    color: "primary",
+    title: "Let's Play!",
+    link: "/",
   },
-}
+};
 
 export const Secondary: Story = {
   args: {
-    color: 'secondary',
-    title: 'How to use',
-    link: '/',
+    color: "secondary",
+    title: "How to use",
+    link: "/",
   },
-}
+};

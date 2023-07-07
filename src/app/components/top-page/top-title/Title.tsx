@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from "react";
 
 const Title: FC = () => {
   return (
@@ -10,7 +10,7 @@ const Title: FC = () => {
         Git Empty
       </h1>
     </div>
-  )
-}
+  );
+};
 
-export default Title
+export default Title;
