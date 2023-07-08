@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -15,7 +16,6 @@ const BackButton = () => {
           alt="トップページに戻るボタン"
           style={{ objectFit: "cover" }}
           fill
-          unoptimized
         />
       </figure>
     </Link>

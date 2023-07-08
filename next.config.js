@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    unoptimized: true,
-  },
-  output: "export",
-  distDir:'/docs',
-  basePath:'/git-trainer'
-};
+
+const nextConfig = {};
+
 
 module.exports = nextConfig;
