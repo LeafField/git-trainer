@@ -32,6 +32,6 @@ export const Secondary: Story = {
   args: {
     color: "secondary",
     title: "How to use",
-    link: "/",
+    link: "/howto",
   },
 };
