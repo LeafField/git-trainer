@@ -43,7 +43,7 @@ const HowToPage = () => {
           </p>
         </div>
         <div className="w-fit mx-auto mt-[5.62rem]">
-          <Button title="Let's Play!" link="/" color="primary" />
+          <Button title="Let's Play!" link="/difficulty" color="primary" />
         </div>
       </div>
     </main>
