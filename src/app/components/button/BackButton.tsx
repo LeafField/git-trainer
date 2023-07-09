@@ -16,6 +16,10 @@ const BackButton = () => {
           alt="トップページに戻るボタン"
           style={{ objectFit: "cover" }}
           fill
+          sizes="72px"
+          priority
+          placeholder="blur"
+          className="transition-all"
         />
       </figure>
     </Link>

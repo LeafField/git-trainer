@@ -15,8 +15,10 @@ const HowToPage = () => {
           width={1605}
           height={856}
           alt="Git Emptyの遊び方参考画像"
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover transition-all"
           sizes="100vw"
+          priority
+          placeholder="blur"
         />
       </figure>
       <div className="max-w-5xl mx-auto">
@@ -43,7 +45,7 @@ const HowToPage = () => {
           </p>
         </div>
         <div className="w-fit mx-auto mt-[5.62rem]">
-          <Button title="Let's Play!" link="/" color="primary" />
+          <Button title="Let's Play!" link="/difficulty" color="primary" />
         </div>
       </div>
     </main>
