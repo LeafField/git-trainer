@@ -17,6 +17,9 @@ const BackButton = () => {
           style={{ objectFit: "cover" }}
           fill
           sizes="72px"
+          priority
+          placeholder="blur"
+          className="transition-all"
         />
       </figure>
     </Link>

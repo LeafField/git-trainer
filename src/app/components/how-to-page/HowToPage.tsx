@@ -15,8 +15,10 @@ const HowToPage = () => {
           width={1605}
           height={856}
           alt="Git Emptyの遊び方参考画像"
-          className="w-full h-auto object-cover"
+          className="w-full h-auto object-cover transition-all"
           sizes="100vw"
+          priority
+          placeholder="blur"
         />
       </figure>
       <div className="max-w-5xl mx-auto">

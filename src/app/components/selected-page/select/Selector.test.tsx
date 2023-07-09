@@ -9,6 +9,7 @@ describe("Selectorのレンダリングテスト", () => {
         title="初級編:GitHub Flow"
         last={false}
         clickHandler={() => {}}
+        url="/console/flow"
       />
     );
     expect(screen.getByText("初級編:GitHub Flow")).toBeInTheDocument();
@@ -21,16 +22,33 @@ describe("Selectorのレンダリングテスト", () => {
         title="初級編:GitHub Flow"
         last={true}
         clickHandler={() => {}}
+        url="/console/flow"
       />
     );
     expect(screen.getByText("初級編:GitHub Flow")).toBeInTheDocument();
     expect(screen.getByText("初級編:GitHub Flow")).toHaveClass("border-b");
   });
 
+  test("lastを指定しない", () => {
+    render(
+      <Selector
+        title="初級編:GitHub Flow"
+        clickHandler={() => {}}
+        url="/console/flow"
+      />
+    );
+    expect(screen.getByText("初級編:GitHub Flow")).not.toHaveClass("border-b");
+  });
+
   test("クリックイベントが発火するか", async () => {
     const mockFn = jest.fn();
     render(
-      <Selector title="初級編:GitHub Flow" last={true} clickHandler={mockFn} />
+      <Selector
+        title="初級編:GitHub Flow"
+        last={true}
+        clickHandler={mockFn}
+        url="/console/flow"
+      />
     );
     await userEvent.click(screen.getByText("初級編:GitHub Flow"));
     expect(mockFn).toHaveBeenCalled();
