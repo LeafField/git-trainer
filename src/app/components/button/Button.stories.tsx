@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 const meta: Meta<typeof Button> = {
   title: "components/Button",
   component: Button,
+  tags: ["autodocs"],
   decorators: [
     (StoryComponents) => (
       <div className={inter.className}>
@@ -24,7 +25,7 @@ export const Primary: Story = {
   args: {
     color: "primary",
     title: "Let's Play!",
-    link: "/",
+    link: "/difficulty",
   },
 };
 

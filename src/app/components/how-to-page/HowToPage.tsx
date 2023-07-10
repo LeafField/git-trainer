@@ -6,22 +6,23 @@ import Button from "../button/Button";
 const HowToPage = () => {
   return (
     <main className="md:px-12 lg:px-40 pb-24">
-      <h1 className="md:text-6xl xl:text-8xl font-bold text-center text-white pt-[7.5rem]">
+      <h1 className="text-4xl md:text-6xl xl:text-8xl font-bold text-center text-white pt-[7.5rem]">
         Git Emptyの遊び方
       </h1>
-      <figure className="relative container mt-[11.25rem]">
+      <figure className="relative max-w-4xl mx-auto  container mt-24 md:mt-[11.25rem]">
         <Image
           src={howToImage}
           width={1605}
           height={856}
+          style={{ objectFit: "cover" }}
           alt="Git Emptyの遊び方参考画像"
-          className="w-full h-auto object-cover transition-all"
+          className="w-full h-auto transition-all"
           sizes="100vw"
           priority
           placeholder="blur"
         />
       </figure>
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="pt-[7.5rem] text-base space-y-4 text-white">
           <p>
             コンソール上部にGitの練習課題が表示されるので該当するgitコマンドを入力してEnterを押してください。

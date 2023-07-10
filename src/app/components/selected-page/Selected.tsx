@@ -7,7 +7,7 @@ const Selected = () => {
   const router = useRouter();
 
   const clickHandler = (title: string) => {
-    router.push(`/console/${title}`);
+    router.push(`/difficulty/${title}`);
   };
 
   return (

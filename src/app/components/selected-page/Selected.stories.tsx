@@ -1,7 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import Selected from "./Selected";
 import { Inter } from "next/font/google";
-import { RouterContext } from "next/dist/shared/lib/router-context";
 
 const inter = Inter({ subsets: ["latin"] });
 

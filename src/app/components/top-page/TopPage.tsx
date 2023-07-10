@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "./top-title/Title";
 import Button from "../button/Button";
+import Footer from "../layout/Footer";
 
 const TopPage = () => {
   return (
@@ -9,6 +10,9 @@ const TopPage = () => {
       <div className="flex mt-32 md:mt-[12.6rem] justify-center gap-16 md:gap-[9.12rem] ">
         <Button title="Let's Play!" link="/difficulty" color="primary" />
         <Button title="How to use" link="/howto" color="secondary" />
+      </div>
+      <div className="absolute bottom-3">
+        <Footer />
       </div>
     </div>
   );

@@ -11,7 +11,7 @@ describe("Buttonのレンダリングテスト", () => {
     expect(
       screen.getByRole("link", { name: "Let's Play!" })
     ).toBeInTheDocument();
-    expect(screen.getByRole("link")).toHaveAttribute("href", "/");
+    expect(screen.getByRole("link")).toHaveAttribute("href", "/difficulty");
   });
 
   test("secondaryのレンダリングテスト", () => {
