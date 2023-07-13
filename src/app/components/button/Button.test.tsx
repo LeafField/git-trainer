@@ -1,21 +1,17 @@
 import { render, screen } from "@testing-library/react";
-import { composeStories } from "@storybook/testing-react";
-import * as story from "./Button.stories";
 import Button from "./Button";
-
-const { Primary, Secondary } = composeStories(story);
 
 describe("Buttonのレンダリングテスト", () => {
   test("primaryのレンダリングテスト", () => {
-    render(<Primary />);
+    render(<Button color="primary" link="/difficulty" title="Let's Play!" />);
     expect(
       screen.getByRole("link", { name: "Let's Play!" })
     ).toBeInTheDocument();
-    expect(screen.getByRole("link")).toHaveAttribute("href", "/");
+    expect(screen.getByRole("link")).toHaveAttribute("href", "/difficulty");
   });
 
   test("secondaryのレンダリングテスト", () => {
-    render(<Secondary />);
+    render(<Button link="/howto" title="How to use" color="secondary" />);
     expect(
       screen.getByRole("link", { name: "How to use" })
     ).toBeInTheDocument();

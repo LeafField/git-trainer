@@ -29,4 +29,11 @@ describe("トップページのレンダリングテスト", () => {
       screen.getAllByText("Gitコマンドを手軽に空打ちできるサイト")
     ).toHaveLength(1);
   });
+
+  test("コピーライト表記がされているか", () => {
+    render(<TopPageStory />);
+    expect(
+      screen.getByText("Copyright © 2023 LeafField All rights reserved.")
+    ).toBeInTheDocument();
+  });
 });

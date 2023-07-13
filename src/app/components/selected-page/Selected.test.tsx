@@ -31,6 +31,6 @@ describe("Selectedの結合テスト", () => {
     render(<SelectedStory />);
     await userEvent.click(screen.getByText("初級編:GitHub Flow"));
     expect(mockPushFn).toHaveBeenCalled();
-    expect(mockPushFn).toHaveBeenCalledWith("/console/flow");
+    expect(mockPushFn).toHaveBeenCalledWith("/difficulty/flow");
   });
 });

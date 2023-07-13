@@ -17,6 +17,7 @@ const Selector: FC<Props> = ({ title, last = false, clickHandler, url }) => {
       onClick={() => {
         clickHandler(url);
       }}
+      role="link"
     >
       {title}
     </div>

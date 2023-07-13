@@ -53,4 +53,16 @@ describe("Selectorのレンダリングテスト", () => {
     await userEvent.click(screen.getByText("初級編:GitHub Flow"));
     expect(mockFn).toHaveBeenCalled();
   });
+
+  test("wai-aria属性が付与されているか", () => {
+    render(
+      <Selector
+        title="初級編:GitHub Flow"
+        last={true}
+        clickHandler={() => {}}
+        url="/console/flow"
+      />
+    );
+    expect(screen.getByRole("link")).toBeInTheDocument();
+  });
 });

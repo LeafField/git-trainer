@@ -3,7 +3,7 @@ import BackButton from "../button/BackButton";
 
 const HowToHeader = () => {
   return (
-    <header>
+    <header className="w-fit">
       <BackButton />
     </header>
   );
