@@ -54,6 +54,7 @@ const ConsoleView: FC<Props> = ({ question, anser, nextCallback }) => {
         break;
 
       default:
+        nextRef.current!.value = "";
         break;
     }
   };

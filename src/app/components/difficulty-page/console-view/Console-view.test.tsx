@@ -11,7 +11,6 @@ const mockPush = jest.fn();
 const mockCallback = jest.fn();
 
 beforeEach(() => {
-  jest.clearAllMocks();
   jest.spyOn(Router, "useRouter").mockImplementation(() => ({
     back: jest.fn(),
     push: mockPush,
@@ -157,6 +156,11 @@ describe("ConsoleViewの結合テスト", () => {
     waitFor(() => {
       expect(mockPush).not.toHaveBeenCalled();
       expect(mockCallback).not.toHaveBeenCalled();
+      expect(
+        screen.getByRole("textbox", {
+          name: "Would you like to start the next problem?(y/n)",
+        })
+      ).toHaveValue("");
     });
   });
 
