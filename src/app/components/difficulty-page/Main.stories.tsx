@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import Difficulty from "./Difficulty";
+import Difficulty from "./Main";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });

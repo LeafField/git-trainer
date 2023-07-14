@@ -1,7 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { fetcher, fetchTitle } from "../../../libs/fetcher";
-import Difficulty from "../../components/difficulty-page/Difficulty";
+import MainPage from "../../components/difficulty-page/Main";
 
 export const generateMetadata = async ({
   params,
@@ -23,7 +23,7 @@ type Props = {
 const ConsolePage = async ({ params }: Props) => {
   const data = await fetcher(params.title);
   console.log(data);
-  return <Difficulty />;
+  return <MainPage />;
 };
 
 export default ConsolePage;
