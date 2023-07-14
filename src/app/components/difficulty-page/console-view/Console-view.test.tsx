@@ -175,12 +175,18 @@ describe("ConsoleViewの結合テスト", () => {
 
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
+      "git"
+    );
+
+    await userEvent.type(
+      screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
       "{enter}"
     );
     waitFor(() => {
       expect(
         screen.getByText("不正解です！右上の検索バーから正解を検索してみてね！")
       ).toBeInTheDocument();
+      expect(screen.queryByText("git")).not.toBeInTheDocument();
     });
   });
 });
