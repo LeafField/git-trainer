@@ -26,6 +26,5 @@ export const SelectorStory: Story = {
   args: {
     title: "初級編:GitHub Flow",
     last: false,
-    clickHandler: () => {},
   },
 };

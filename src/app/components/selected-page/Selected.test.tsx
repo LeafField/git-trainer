@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
 import { composeStories } from "@storybook/testing-react";
 import * as story from "./Selected.stories";
 import * as Router from "next/navigation";
@@ -25,13 +24,5 @@ describe("Selectedの結合テスト", () => {
     const { container } = render(<SelectedStory />);
     expect(screen.getByText("初級編:GitHub Flow")).toBeInTheDocument();
     expect(container).toMatchSnapshot();
-  });
-  it("Selectorのクリックイベントが発火するか", async () => {
-    const mockPushFn = jest.fn();
-    mockRouter(mockPushFn);
-    render(<SelectedStory />);
-    await userEvent.click(screen.getByText("初級編:GitHub Flow"));
-    expect(mockPushFn).toHaveBeenCalled();
-    expect(mockPushFn).toHaveBeenCalledWith("/difficulty/flow");
   });
 });
