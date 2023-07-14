@@ -22,8 +22,9 @@ const mockRouter = (mockCallback?: () => {}) => {
 describe("Selectedの結合テスト", () => {
   it("Selectedが正しくレンダリングされているか", async () => {
     mockRouter();
-    render(<SelectedStory />);
+    const { container } = render(<SelectedStory />);
     expect(screen.getByText("初級編:GitHub Flow")).toBeInTheDocument();
+    expect(container).toMatchSnapshot();
   });
   it("Selectorのクリックイベントが発火するか", async () => {
     const mockPushFn = jest.fn();

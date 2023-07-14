@@ -11,4 +11,9 @@ describe("PageTitle", () => {
     render(<PageTitle title="中級編:GitHub Flow" />);
     expect(screen.getByText("中級編:GitHub Flow")).toBeInTheDocument();
   });
+
+  it("スナップショットテスト", () => {
+    const { container } = render(<PageTitle title="初級編:GitHub Flow" />);
+    expect(container).toMatchSnapshot();
+  });
 });

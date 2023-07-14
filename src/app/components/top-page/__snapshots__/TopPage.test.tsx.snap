@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`トップページのレンダリングテスト スナップショットのテスト 1`] = `
+<div>
+  <div
+    class="className"
+  >
+    <div
+      class="flex flex-col justify-center items-center min-h-screen w-full"
+    >
+      <div
+        class="mx-auto flex flex-col gap-5 md:gap-[2.375rem]"
+      >
+        <p
+          class="text-base md:text-2xl text-white text-center "
+        >
+          Gitコマンドを手軽に空打ちできるサイト
+        </p>
+        <h1
+          class="text-4xl font-bold md:text-8xl text-white text-center "
+        >
+          Git Empty
+        </h1>
+      </div>
+      <div
+        class="flex mt-32 md:mt-[12.6rem] justify-center gap-16 md:gap-[9.12rem] "
+      >
+        <a
+          class="text-white block w-fit text-base md:text-2xl rounded-[2.8125rem] py-2 px-5 md:py-4 md:px-10
+      font-normal hover:after:content-[""] hover:after:bg-white after:transition-all after:block
+      after:h-[1px] after:w-full after:scale-0 hover:after:scale-100
+      bg-primary false"
+          href="/difficulty"
+        >
+          Let's Play!
+        </a>
+        <a
+          class="text-white block w-fit text-base md:text-2xl rounded-[2.8125rem] py-2 px-5 md:py-4 md:px-10
+      font-normal hover:after:content-[""] hover:after:bg-white after:transition-all after:block
+      after:h-[1px] after:w-full after:scale-0 hover:after:scale-100
+      false border-white border"
+          href="/howto"
+        >
+          How to use
+        </a>
+      </div>
+      <div
+        class="absolute bottom-3"
+      >
+        <footer
+          class="pb-10"
+        >
+          <small
+            class="text-white block text-center"
+          >
+            Copyright © 2023 LeafField All rights reserved.
+          </small>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+`;

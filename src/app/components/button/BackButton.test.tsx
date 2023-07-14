@@ -5,7 +5,8 @@ import * as Stories from "./BackButton.stories";
 const { BackButtonTemplate } = composeStories(Stories);
 
 test("BackButtonがきちんとレンダリングされているか", () => {
-  render(<BackButtonTemplate />);
+  const { container } = render(<BackButtonTemplate />);
   expect(screen.getByRole("link")).toBeInTheDocument();
   expect(screen.getByRole("img")).toBeInTheDocument();
+  expect(container).toMatchSnapshot();
 });
