@@ -3,7 +3,7 @@ import HowToPage from "./HowToPage";
 
 describe("HowToPage", () => {
   test("HowToPageが正しく表示されているか", () => {
-    render(<HowToPage />);
+    const { container } = render(<HowToPage />);
     expect(screen.getByText("Git Emptyの遊び方")).toBeInTheDocument();
     expect(
       screen.getByText(
@@ -20,5 +20,7 @@ describe("HowToPage", () => {
     expect(
       screen.getByRole("link", { name: "Let's Play!" })
     ).toBeInTheDocument();
+
+    expect(container).toMatchSnapshot();
   });
 });

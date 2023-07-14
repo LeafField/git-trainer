@@ -11,7 +11,6 @@ const mockPush = jest.fn();
 const mockCallback = jest.fn();
 
 beforeEach(() => {
-  jest.clearAllMocks();
   jest.spyOn(Router, "useRouter").mockImplementation(() => ({
     back: jest.fn(),
     push: mockPush,
@@ -26,7 +25,7 @@ afterEach(() => {
   jest.clearAllMocks();
 });
 
-describe("ConsoleViewの結合テスト", () => {
+describe("ConsoleViewの単体テスト", () => {
   it("ConsoleViewが正しくレンダリングされているか", async () => {
     render(
       <ConsoleView
@@ -50,7 +49,7 @@ describe("ConsoleViewの結合テスト", () => {
   });
 
   it("正常系:課題に正解した場合、次の課題に進むためのコールバック関数が発火するか", async () => {
-    render(
+    const { container } = render(
       <ConsoleView
         question="リモートブランチをoriginに登録したい"
         anser="git remote add origin URL"
@@ -69,6 +68,7 @@ describe("ConsoleViewの結合テスト", () => {
       expect(
         screen.getByText("Would you like to start the next problem?(y/n)")
       ).toBeInTheDocument();
+      expect(container).toMatchSnapshot();
     });
 
     await userEvent.type(
@@ -157,16 +157,26 @@ describe("ConsoleViewの結合テスト", () => {
     waitFor(() => {
       expect(mockPush).not.toHaveBeenCalled();
       expect(mockCallback).not.toHaveBeenCalled();
+      expect(
+        screen.getByRole("textbox", {
+          name: "Would you like to start the next problem?(y/n)",
+        })
+      ).toHaveValue("");
     });
   });
 
   it("異常系:問題に不正解の場合に、不正解のメッセージが表示されるか", async () => {
-    render(
+    const { container } = render(
       <ConsoleView
         question="リモートブランチをoriginに登録したい"
         anser="git remote add origin URL"
         nextCallback={mockCallback}
       />
+    );
+
+    await userEvent.type(
+      screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
+      "git"
     );
 
     await userEvent.type(
@@ -177,6 +187,8 @@ describe("ConsoleViewの結合テスト", () => {
       expect(
         screen.getByText("不正解です！右上の検索バーから正解を検索してみてね！")
       ).toBeInTheDocument();
+      expect(screen.queryByText("git")).not.toBeInTheDocument();
+      expect(container).toMatchSnapshot();
     });
   });
 });

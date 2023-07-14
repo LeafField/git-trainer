@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footerが正しくレンダリングされているか 1`] = `
+<div>
+  <footer
+    class="pb-10"
+  >
+    <small
+      class="text-white block text-center"
+    >
+      Copyright © 2023 LeafField All rights reserved.
+    </small>
+  </footer>
+</div>
+`;

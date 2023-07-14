@@ -36,4 +36,9 @@ describe("トップページのレンダリングテスト", () => {
       screen.getByText("Copyright © 2023 LeafField All rights reserved.")
     ).toBeInTheDocument();
   });
+
+  test("スナップショットのテスト", () => {
+    const { container } = render(<TopPageStory />);
+    expect(container).toMatchSnapshot();
+  });
 });

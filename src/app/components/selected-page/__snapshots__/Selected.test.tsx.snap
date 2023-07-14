@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Selectedの結合テスト Selectedが正しくレンダリングされているか 1`] = `
+<div>
+  <div
+    class="className"
+  >
+    <main
+      class="min-h-[calc(100vw - 45px)] w-full "
+    >
+      <h1
+        class="text-4xl md:text-5xl font-bold text-white text-center mt-[5%]"
+      >
+        難易度選択
+      </h1>
+      <div
+        class="mt-[8%]"
+      >
+        <div
+          class="border-t  border-white text-white text-center text-3xl md:text-4xl py-[2.94rem] cursor-pointer transition-colors hover:text-gray-400"
+          role="link"
+        >
+          初級編:GitHub Flow
+        </div>
+        <div
+          class="border-t  border-white text-white text-center text-3xl md:text-4xl py-[2.94rem] cursor-pointer transition-colors hover:text-gray-400"
+          role="link"
+        >
+          中級編:制作中
+        </div>
+        <div
+          class="border-t border-b border-white text-white text-center text-3xl md:text-4xl py-[2.94rem] cursor-pointer transition-colors hover:text-gray-400"
+          role="link"
+        >
+          上級編:制作中
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

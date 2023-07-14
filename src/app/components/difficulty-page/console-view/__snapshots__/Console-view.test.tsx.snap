@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、次の課題に進むためのコールバック関数が発火するか 1`] = `
+<div>
+  <main
+    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text "
+  >
+    <h2
+      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+    >
+      Git Empty
+    </h2>
+    <div
+      class="bg-console min-h-full pt-7 pl-3"
+    >
+      <p>
+        リモートブランチをoriginに登録したい
+      </p>
+      <form
+        class="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+      >
+        <label
+          for="console"
+        >
+          C:users/gitEmpty&gt;
+        </label>
+        <input
+          class="outline-none bg-transparent flex-1"
+          id="console"
+          name="console"
+          type="text"
+        />
+      </form>
+      <div
+        class="pt-4"
+      >
+        <p>
+          Congratulations, you are correct!
+        </p>
+        <form
+          class="flex flex-col md:flex-row max-w-full"
+        >
+          <label
+            for="consoleInput"
+          >
+            Would you like to start the next problem?
+            (y/n)
+          </label>
+          <input
+            class="outline-none bg-transparent ml-1"
+            id="consoleInput"
+            type="text"
+          />
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に、不正解のメッセージが表示されるか 1`] = `
+<div>
+  <main
+    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text "
+  >
+    <h2
+      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+    >
+      Git Empty
+    </h2>
+    <div
+      class="bg-console min-h-full pt-7 pl-3"
+    >
+      <p>
+        リモートブランチをoriginに登録したい
+      </p>
+      <div
+        class="pt-4"
+      >
+        不正解です！右上の検索バーから正解を検索してみてね！
+      </div>
+      <form
+        class="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+      >
+        <label
+          for="console"
+        >
+          C:users/gitEmpty&gt;
+        </label>
+        <input
+          class="outline-none bg-transparent flex-1"
+          id="console"
+          name="console"
+          type="text"
+        />
+      </form>
+    </div>
+  </main>
+</div>
+`;

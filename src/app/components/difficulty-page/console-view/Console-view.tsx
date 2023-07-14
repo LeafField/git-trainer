@@ -34,6 +34,8 @@ const ConsoleView: FC<Props> = ({ question, anser, nextCallback }) => {
       setTimeout(() => {
         nextRef.current?.focus();
       }, 300);
+    } else {
+      consoleRef.current!.value = "";
     }
   };
 
@@ -54,6 +56,7 @@ const ConsoleView: FC<Props> = ({ question, anser, nextCallback }) => {
         break;
 
       default:
+        nextRef.current!.value = "";
         break;
     }
   };

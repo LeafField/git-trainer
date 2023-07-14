@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Asideの単体テスト Asideのスナップショットテスト 1`] = `
+<div>
+  <aside
+    class="text-white"
+  >
+    <h3
+      class="text-2xl"
+    >
+      フォルダ名、リモート名などの注意
+    </h3>
+    <p
+      class="pt-9"
+    >
+      リモートリポジトリのURLは「URL」と打ってください
+      <br />
+      例:git remote add origin URL
+    </p>
+    <p
+      class="pt-4"
+    >
+      フォルダ名を指定する場合は「.」と打ってください
+      <br />
+      例:git add .
+    </p>
+  </aside>
+</div>
+`;
