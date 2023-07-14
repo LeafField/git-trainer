@@ -1,10 +1,10 @@
 import type { Preview } from "@storybook/react";
 import { INITIAL_VIEWPORTS } from "@storybook/addon-viewport";
 
-import { withThemeByClassName } from "@storybook/addon-styling";
+// import { withThemeByClassName } from "@storybook/addon-styling";
 
 /* TODO: update import to your tailwind styles file. If you're using Angular, inject this through your angular.json config instead */
-import "../src/index.css";
+import "../src/app/global.css";
 
 const preview: Preview = {
   parameters: {
