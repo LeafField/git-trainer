@@ -1,6 +1,7 @@
 import React from "react";
 import { Metadata } from "next";
 import { fetcher, fetchTitle } from "../../../libs/fetcher";
+import Difficulty from "../../components/difficulty-page/Difficulty";
 
 export const generateMetadata = async ({
   params,
@@ -21,17 +22,8 @@ type Props = {
 
 const ConsolePage = async ({ params }: Props) => {
   const data = await fetcher(params.title);
-  return (
-    <ul className="text-white">
-      {data.map((item) => (
-        <li key={item.id}>
-          <p>{item.id}</p>
-          <p>{item.question}</p>
-          <p>{item.anser}</p>
-        </li>
-      ))}
-    </ul>
-  );
+  console.log(data);
+  return <Difficulty />;
 };
 
 export default ConsolePage;

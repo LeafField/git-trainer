@@ -3,7 +3,7 @@
 exports[`PageTitle スナップショットテスト 1`] = `
 <div>
   <h1
-    class="text-4xl text-white"
+    class="text-4xl text-white row-start-1 col-start-2 col-end-4"
   >
     初級編:GitHub Flow
   </h1>

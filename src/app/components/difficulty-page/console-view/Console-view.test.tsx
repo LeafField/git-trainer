@@ -30,7 +30,7 @@ describe("ConsoleViewの単体テスト", () => {
     render(
       <ConsoleView
         question="リモートブランチをoriginに登録したい"
-        anser="git remote add origin URL"
+        answer="git remote add origin URL"
         nextCallback={mockCallback}
       />
     );
@@ -52,7 +52,7 @@ describe("ConsoleViewの単体テスト", () => {
     const { container } = render(
       <ConsoleView
         question="リモートブランチをoriginに登録したい"
-        anser="git remote add origin URL"
+        answer="git remote add origin URL"
         nextCallback={mockCallback}
       />
     );
@@ -93,7 +93,7 @@ describe("ConsoleViewの単体テスト", () => {
     render(
       <ConsoleView
         question="リモートブランチをoriginに登録したい"
-        anser="git remote add origin URL"
+        answer="git remote add origin URL"
         nextCallback={mockCallback}
       />
     );
@@ -128,7 +128,7 @@ describe("ConsoleViewの単体テスト", () => {
     render(
       <ConsoleView
         question="リモートブランチをoriginに登録したい"
-        anser="git remote add origin URL"
+        answer="git remote add origin URL"
         nextCallback={mockCallback}
       />
     );
@@ -169,7 +169,7 @@ describe("ConsoleViewの単体テスト", () => {
     const { container } = render(
       <ConsoleView
         question="リモートブランチをoriginに登録したい"
-        anser="git remote add origin URL"
+        answer="git remote add origin URL"
         nextCallback={mockCallback}
       />
     );
