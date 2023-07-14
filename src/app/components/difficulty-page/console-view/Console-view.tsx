@@ -1,13 +1,14 @@
+"use client";
 import React, { FC, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 
 type Props = {
   question: string;
-  anser: string;
+  answer: string;
   nextCallback: () => void;
 };
 
-const ConsoleView: FC<Props> = ({ question, anser, nextCallback }) => {
+const ConsoleView: FC<Props> = ({ question, answer, nextCallback }) => {
   const [wrong, setWrong] = useState<boolean>(false);
   const [next, setNext] = useState<boolean>(false);
 
@@ -26,7 +27,7 @@ const ConsoleView: FC<Props> = ({ question, anser, nextCallback }) => {
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const verifying = consoleRef.current?.value !== anser;
+    const verifying = consoleRef.current?.value !== answer;
     setWrong(verifying);
 
     if (!verifying) {
@@ -67,7 +68,7 @@ const ConsoleView: FC<Props> = ({ question, anser, nextCallback }) => {
 
   return (
     <main
-      className="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text "
+      className="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
       onClick={clickConsole}
     >
       <h2 className="text-white h-6 bg-consoleHeader pl-4 text-base">

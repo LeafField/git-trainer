@@ -10,11 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Home: NextPage = () => {
-  return (
-    <>
-      <TopPage />
-    </>
-  );
+  return <TopPage />;
 };
 
 export default Home;
