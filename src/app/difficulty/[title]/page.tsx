@@ -22,8 +22,8 @@ type Props = {
 
 const ConsolePage = async ({ params }: Props) => {
   const data = await fetcher(params.title);
-  console.log(data);
-  return <MainPage />;
+  const title = await fetchTitle(params.title);
+  return <MainPage data={data} title={title} />;
 };
 
 export default ConsolePage;

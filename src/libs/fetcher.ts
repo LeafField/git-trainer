@@ -1,5 +1,4 @@
 import { cache } from "react";
-import { Metadata } from "next";
 import {
   getDocs,
   collection,
@@ -10,10 +9,10 @@ import {
 } from "firebase/firestore";
 import { db } from "./firebase";
 
-type FetchData = {
+export type FetchData = {
   id: number;
   question: string;
-  anser: string;
+  answer: string;
 };
 
 export const fetcher = cache(async (title: string): Promise<FetchData[]> => {

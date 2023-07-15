@@ -6,9 +6,15 @@ type Props = {
   question: string;
   answer: string;
   nextCallback: () => void;
+  finished: boolean;
 };
 
-const ConsoleView: FC<Props> = ({ question, answer, nextCallback }) => {
+const ConsoleView: FC<Props> = ({
+  question,
+  answer,
+  nextCallback,
+  finished,
+}) => {
   const [wrong, setWrong] = useState<boolean>(false);
   const [next, setNext] = useState<boolean>(false);
 
@@ -34,7 +40,7 @@ const ConsoleView: FC<Props> = ({ question, answer, nextCallback }) => {
       setNext(true);
       setTimeout(() => {
         nextRef.current?.focus();
-      }, 300);
+      }, 100);
     } else {
       consoleRef.current!.value = "";
     }
@@ -48,8 +54,9 @@ const ConsoleView: FC<Props> = ({ question, answer, nextCallback }) => {
         setNext(false);
         consoleRef.current!.value = "";
         setTimeout(() => {
+          if (finished) return;
           consoleRef.current?.focus();
-        }, 300);
+        }, 100);
         break;
 
       case "n":
@@ -66,6 +73,14 @@ const ConsoleView: FC<Props> = ({ question, answer, nextCallback }) => {
     consoleRef.current?.focus();
   }, [consoleRef]);
 
+  useEffect(() => {
+    if (finished) {
+      setTimeout(() => {
+        router.push("/difficulty");
+      }, 3000);
+    }
+  }, [finished, router]);
+
   return (
     <main
       className="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
@@ -81,19 +96,28 @@ const ConsoleView: FC<Props> = ({ question, answer, nextCallback }) => {
             不正解です！右上の検索バーから正解を検索してみてね！
           </div>
         )}
-        <form
-          className="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
-          onSubmit={handleSubmit}
-        >
-          <label htmlFor="console">C:users/gitEmpty&gt;</label>
-          <input
-            type="text"
-            name="console"
-            id="console"
-            className="outline-none bg-transparent flex-1"
-            ref={consoleRef}
-          />
-        </form>
+        {finished && (
+          <div className="pt-4">
+            <p className="font-bold text-xl">Congratulations!</p>
+            <p className="pt-2">ここまで遊んでくれてありがとうございます</p>
+            <p>是非他の難易度も遊んでみてください</p>
+          </div>
+        )}
+        {finished || (
+          <form
+            className="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+            onSubmit={handleSubmit}
+          >
+            <label htmlFor="console">C:users/gitEmpty&gt;</label>
+            <input
+              type="text"
+              name="console"
+              id="console"
+              className="outline-none bg-transparent flex-1"
+              ref={consoleRef}
+            />
+          </form>
+        )}
         {next && (
           <div className="pt-4">
             <p>Congratulations, you are correct!</p>

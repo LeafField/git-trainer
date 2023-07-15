@@ -29,6 +29,7 @@ describe("ConsoleViewの単体テスト", () => {
   it("ConsoleViewが正しくレンダリングされているか", async () => {
     render(
       <ConsoleView
+        finished={false}
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
@@ -51,6 +52,7 @@ describe("ConsoleViewの単体テスト", () => {
   it("正常系:課題に正解した場合、次の課題に進むためのコールバック関数が発火するか", async () => {
     const { container } = render(
       <ConsoleView
+        finished={false}
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
@@ -92,6 +94,7 @@ describe("ConsoleViewの単体テスト", () => {
   it("正常系:問題に正解した上で、次の問題に進まない場合mockPushが発火するか", async () => {
     render(
       <ConsoleView
+        finished={false}
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
@@ -130,6 +133,7 @@ describe("ConsoleViewの単体テスト", () => {
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
+        finished={false}
       />
     );
     await userEvent.type(
@@ -171,6 +175,7 @@ describe("ConsoleViewの単体テスト", () => {
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
+        finished={false}
       />
     );
 
