@@ -196,4 +196,20 @@ describe("ConsoleViewの単体テスト", () => {
       expect(container).toMatchSnapshot();
     });
   });
+
+  it("正常系:全問正解後にメッセージが流れ、router.pushが発火するか", async () => {
+    jest.useFakeTimers();
+    const { container } = render(
+      <ConsoleView
+        finished={true}
+        question="リモートブランチをoriginに登録したい"
+        answer="git remote add origin URL"
+        nextCallback={mockCallback}
+      />
+    );
+    jest.runAllTimers();
+    expect(screen.getByText("Congratulations!")).toBeInTheDocument();
+    expect(mockPush).toHaveBeenCalledWith("/difficulty");
+    expect(container).toMatchSnapshot();
+  });
 });
