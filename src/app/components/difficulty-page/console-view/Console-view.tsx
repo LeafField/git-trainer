@@ -54,8 +54,9 @@ const ConsoleView: FC<Props> = ({
         setNext(false);
         consoleRef.current!.value = "";
         setTimeout(() => {
-          if (finished) return;
-          consoleRef.current?.focus();
+          if (!finished) {
+            consoleRef.current?.focus();
+          }
         }, 100);
         break;
 
