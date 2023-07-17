@@ -17,7 +17,7 @@ type Story = StoryObj<typeof meta>;
 
 export const HumbargerStory: Story = {
   args: {
-    isHidden: false,
+    isHidden: true,
     HumbargerOpen: () => {},
   },
 };
