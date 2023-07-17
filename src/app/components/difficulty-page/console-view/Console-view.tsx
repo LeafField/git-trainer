@@ -84,14 +84,13 @@ const ConsoleView: FC<Props> = ({
 
   return (
     <main
-      className="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg
-      overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
+      className="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
       onClick={clickConsole}
     >
-      <h2 className="text-white h-6 bg-consoleHeader pl-3 text-base">
+      <h2 className="h-6 bg-consoleHeader pl-3 text-base text-white">
         Git Empty
       </h2>
-      <div className="bg-console min-h-full pt-7 px-3">
+      <div className="min-h-full bg-console px-3 pt-7">
         <p>{question}</p>
         {wrong && (
           <div className="pt-4">
@@ -100,14 +99,14 @@ const ConsoleView: FC<Props> = ({
         )}
         {finished && (
           <div className="pt-4">
-            <p className="font-bold text-xl">Congratulations!</p>
+            <p className="text-xl font-bold">Congratulations!</p>
             <p className="pt-2">ここまで遊んでくれてありがとうございます</p>
             <p>是非他の難易度も遊んでみてください</p>
           </div>
         )}
         {finished || (
           <form
-            className="mt-6 flex flex-col sm:flex-row gap-1 max-w-full"
+            className="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
             onSubmit={handleSubmit}
           >
             <label htmlFor="console">C:users/gitEmpty&gt;</label>
@@ -115,7 +114,7 @@ const ConsoleView: FC<Props> = ({
               type="text"
               name="console"
               id="console"
-              className="outline-none bg-transparent flex-1"
+              className="flex-1 bg-transparent outline-none"
               ref={consoleRef}
             />
           </form>
@@ -125,7 +124,7 @@ const ConsoleView: FC<Props> = ({
             <p>Congratulations, you are correct!</p>
             <form
               onSubmit={handleNext}
-              className="flex flex-col sm:flex-row max-w-full"
+              className="flex max-w-full flex-col sm:flex-row"
             >
               <label htmlFor="consoleInput">
                 Would you like to start the next problem?{"(y/n)"}
@@ -133,7 +132,7 @@ const ConsoleView: FC<Props> = ({
               <input
                 type="text"
                 id="consoleInput"
-                className="outline-none bg-transparent ml-1"
+                className="ml-1 bg-transparent outline-none"
                 ref={nextRef}
               />
             </form>
