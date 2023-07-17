@@ -84,7 +84,8 @@ const ConsoleView: FC<Props> = ({
 
   return (
     <main
-      className="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
+      className="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg
+      overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
       onClick={clickConsole}
     >
       <h2 className="text-white h-6 bg-consoleHeader pl-4 text-base">

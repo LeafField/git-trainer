@@ -3,7 +3,7 @@
 exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセージが流れ、router.pushが発火するか 1`] = `
 <div>
   <main
-    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
+    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg   overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
   >
     <h2
       class="text-white h-6 bg-consoleHeader pl-4 text-base"
@@ -41,7 +41,7 @@ exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセー�
 exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、次の課題に進むためのコールバック関数が発火するか 1`] = `
 <div>
   <main
-    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
+    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg   overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
   >
     <h2
       class="text-white h-6 bg-consoleHeader pl-4 text-base"
@@ -99,7 +99,7 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
 exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に、不正解のメッセージが表示されるか 1`] = `
 <div>
   <main
-    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
+    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg   overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
   >
     <h2
       class="text-white h-6 bg-consoleHeader pl-4 text-base"

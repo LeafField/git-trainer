@@ -24,7 +24,7 @@ const MainPage: FC<Props> = ({ data, title }) => {
   }, [finished, questionNumber, data]);
 
   return (
-    <div className="grid xl:grid-cols-[minmax(0,25rem)_1fr_1fr] gap-x-9  grid-rows-[auto 1fr]  h-[calc(100vh-2.81rem)] px-7 max-w-[120rem] mx-auto">
+    <div className="grid grid-rows-1 lg:grid-cols-[minmax(0,25rem)_1fr_1fr] gap-x-9 gap-y-[7rem]  lg:grid-rows-[auto_1fr]  h-[calc(100vh-2.81rem)] px-7 max-w-[120rem] mx-auto">
       <PageTitle title={title} />
       <Aside />
       <ConsoleView
