@@ -25,6 +25,21 @@ const meta: Meta<typeof Difficulty> = {
       },
     },
   },
+  args: {
+    data: [
+      {
+        id: 1,
+        question: "リモートブランチをoriginに登録したい",
+        answer: "git remote add origin URL",
+      },
+      {
+        id: 2,
+        question: "リモートブランチをoriginに登録したい",
+        answer: "git remote add origin URL",
+      },
+    ],
+    title: "初級編:GitHub Flow",
+  },
 };
 
 export default meta;

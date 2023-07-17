@@ -3,15 +3,15 @@
 exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセージが流れ、router.pushが発火するか 1`] = `
 <div>
   <main
-    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
+    class="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
   >
     <h2
-      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+      class="h-6 bg-consoleHeader pl-3 text-base text-white"
     >
       Git Empty
     </h2>
     <div
-      class="bg-console min-h-full pt-7 pl-3"
+      class="min-h-full bg-console px-3 pt-7"
     >
       <p>
         リモートブランチをoriginに登録したい
@@ -20,7 +20,7 @@ exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセー�
         class="pt-4"
       >
         <p
-          class="font-bold text-xl"
+          class="text-xl font-bold"
         >
           Congratulations!
         </p>
@@ -41,21 +41,21 @@ exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセー�
 exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、次の課題に進むためのコールバック関数が発火するか 1`] = `
 <div>
   <main
-    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
+    class="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
   >
     <h2
-      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+      class="h-6 bg-consoleHeader pl-3 text-base text-white"
     >
       Git Empty
     </h2>
     <div
-      class="bg-console min-h-full pt-7 pl-3"
+      class="min-h-full bg-console px-3 pt-7"
     >
       <p>
         リモートブランチをoriginに登録したい
       </p>
       <form
-        class="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+        class="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
       >
         <label
           for="console"
@@ -63,7 +63,7 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
           C:users/gitEmpty&gt;
         </label>
         <input
-          class="outline-none bg-transparent flex-1"
+          class="flex-1 bg-transparent outline-none"
           id="console"
           name="console"
           type="text"
@@ -76,7 +76,7 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
           Congratulations, you are correct!
         </p>
         <form
-          class="flex flex-col md:flex-row max-w-full"
+          class="flex max-w-full flex-col sm:flex-row"
         >
           <label
             for="consoleInput"
@@ -85,7 +85,7 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
             (y/n)
           </label>
           <input
-            class="outline-none bg-transparent ml-1"
+            class="ml-1 bg-transparent outline-none"
             id="consoleInput"
             type="text"
           />
@@ -99,15 +99,15 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
 exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に、不正解のメッセージが表示されるか 1`] = `
 <div>
   <main
-    class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg overflow-hidden border border-consoleHeader cursor-text col-start-2 col-span-4 row-start-2"
+    class="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
   >
     <h2
-      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+      class="h-6 bg-consoleHeader pl-3 text-base text-white"
     >
       Git Empty
     </h2>
     <div
-      class="bg-console min-h-full pt-7 pl-3"
+      class="min-h-full bg-console px-3 pt-7"
     >
       <p>
         リモートブランチをoriginに登録したい
@@ -118,7 +118,7 @@ exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に�
         不正解です！右上の検索バーから正解を検索してみてね！
       </div>
       <form
-        class="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+        class="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
       >
         <label
           for="console"
@@ -126,7 +126,7 @@ exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に�
           C:users/gitEmpty&gt;
         </label>
         <input
-          class="outline-none bg-transparent flex-1"
+          class="flex-1 bg-transparent outline-none"
           id="console"
           name="console"
           type="text"

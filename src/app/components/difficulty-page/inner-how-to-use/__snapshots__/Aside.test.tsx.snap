@@ -3,10 +3,13 @@
 exports[`Asideの単体テスト Asideのスナップショットテスト 1`] = `
 <div>
   <aside
-    class="text-white row-start-2 row-end-3 col-start-1 col-end-2"
+    aria-hidden="false"
+    class="absolute inset-0 col-start-1 col-end-2 row-start-2 row-end-3 bg-consoleHeader px-4 pt-[6rem] text-white transition-all duration-300 ease-in-out aria-hidden:invisible  aria-hidden:opacity-0 lg:visible lg:static lg:bg-inherit lg:px-0 lg:pt-0"
+    data-testid="aside"
+    id="aside"
   >
     <h3
-      class="text-2xl"
+      class="text-lg lg:text-2xl"
     >
       フォルダ名、リモート名などの注意
     </h3>

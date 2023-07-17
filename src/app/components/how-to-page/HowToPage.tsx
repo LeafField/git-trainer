@@ -14,7 +14,7 @@ const HowToPage = () => {
           src={howToImage}
           width={1605}
           height={856}
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", transition: "all 0.25s ease-in-out" }}
           alt="Git Emptyの遊び方参考画像"
           className="w-full h-auto transition-all"
           sizes="100vw"

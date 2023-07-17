@@ -22,4 +22,19 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const AsideStory: Story = {};
+export const AsideStory: Story = {
+  args: {
+    isHidden: false,
+  },
+};
+
+export const AsideSPStory: Story = {
+  args: {
+    isHidden: false,
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: "iphone6",
+    },
+  },
+};
