@@ -88,10 +88,10 @@ const ConsoleView: FC<Props> = ({
       overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
       onClick={clickConsole}
     >
-      <h2 className="text-white h-6 bg-consoleHeader pl-4 text-base">
+      <h2 className="text-white h-6 bg-consoleHeader pl-3 text-base">
         Git Empty
       </h2>
-      <div className="bg-console min-h-full pt-7 pl-3">
+      <div className="bg-console min-h-full pt-7 px-3">
         <p>{question}</p>
         {wrong && (
           <div className="pt-4">
@@ -107,7 +107,7 @@ const ConsoleView: FC<Props> = ({
         )}
         {finished || (
           <form
-            className="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+            className="mt-6 flex flex-col sm:flex-row gap-1 max-w-full"
             onSubmit={handleSubmit}
           >
             <label htmlFor="console">C:users/gitEmpty&gt;</label>
@@ -125,7 +125,7 @@ const ConsoleView: FC<Props> = ({
             <p>Congratulations, you are correct!</p>
             <form
               onSubmit={handleNext}
-              className="flex flex-col md:flex-row max-w-full"
+              className="flex flex-col sm:flex-row max-w-full"
             >
               <label htmlFor="consoleInput">
                 Would you like to start the next problem?{"(y/n)"}

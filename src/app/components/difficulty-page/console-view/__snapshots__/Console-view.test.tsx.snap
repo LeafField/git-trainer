@@ -6,12 +6,12 @@ exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセー�
     class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg   overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
   >
     <h2
-      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+      class="text-white h-6 bg-consoleHeader pl-3 text-base"
     >
       Git Empty
     </h2>
     <div
-      class="bg-console min-h-full pt-7 pl-3"
+      class="bg-console min-h-full pt-7 px-3"
     >
       <p>
         リモートブランチをoriginに登録したい
@@ -44,18 +44,18 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
     class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg   overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
   >
     <h2
-      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+      class="text-white h-6 bg-consoleHeader pl-3 text-base"
     >
       Git Empty
     </h2>
     <div
-      class="bg-console min-h-full pt-7 pl-3"
+      class="bg-console min-h-full pt-7 px-3"
     >
       <p>
         リモートブランチをoriginに登録したい
       </p>
       <form
-        class="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+        class="mt-6 flex flex-col sm:flex-row gap-1 max-w-full"
       >
         <label
           for="console"
@@ -76,7 +76,7 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
           Congratulations, you are correct!
         </p>
         <form
-          class="flex flex-col md:flex-row max-w-full"
+          class="flex flex-col sm:flex-row max-w-full"
         >
           <label
             for="consoleInput"
@@ -102,12 +102,12 @@ exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に�
     class="text-[rgb(204,204,204)] max-w-[62.5rem] h-[29.125rem] rounded-lg   overflow-hidden border border-consoleHeader cursor-text lg:col-start-2 lg:col-span-4 row-start-2"
   >
     <h2
-      class="text-white h-6 bg-consoleHeader pl-4 text-base"
+      class="text-white h-6 bg-consoleHeader pl-3 text-base"
     >
       Git Empty
     </h2>
     <div
-      class="bg-console min-h-full pt-7 pl-3"
+      class="bg-console min-h-full pt-7 px-3"
     >
       <p>
         リモートブランチをoriginに登録したい
@@ -118,7 +118,7 @@ exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に�
         不正解です！右上の検索バーから正解を検索してみてね！
       </div>
       <form
-        class="mt-6 flex flex-col md:flex-row gap-1 max-w-full"
+        class="mt-6 flex flex-col sm:flex-row gap-1 max-w-full"
       >
         <label
           for="console"

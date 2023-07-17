@@ -14,7 +14,7 @@ const BackButton = () => {
         <Image
           src={backImage}
           alt="トップページに戻るボタン"
-          style={{ objectFit: "cover" }}
+          style={{ objectFit: "cover", transition: "all 0.25s ease-in-out" }}
           fill
           sizes="72px"
           priority

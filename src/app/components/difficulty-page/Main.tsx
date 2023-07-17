@@ -4,6 +4,7 @@ import PageTitle from "./page-title/PageTitle";
 import Aside from "./inner-how-to-use/Aside";
 import ConsoleView from "./console-view/Console-view";
 import { FetchData } from "../../../libs/fetcher";
+import Humbarger from "../button/Humbarger";
 
 type Props = {
   data: FetchData[];
@@ -13,7 +14,11 @@ type Props = {
 const MainPage: FC<Props> = ({ data, title }) => {
   const [questionNumber, dispatch] = useReducer(
     (state: number) => state + 1,
-    0
+    0,
+  );
+  const [isHidden, HumbargerDispatch] = useReducer(
+    (state: boolean) => !state,
+    true,
   );
   const [finished, setFinished] = useState<boolean>(false);
 
@@ -24,9 +29,10 @@ const MainPage: FC<Props> = ({ data, title }) => {
   }, [finished, questionNumber, data]);
 
   return (
-    <div className="grid grid-rows-1 lg:grid-cols-[minmax(0,25rem)_1fr_1fr] gap-x-9 gap-y-[7rem]  lg:grid-rows-[auto_1fr]  h-[calc(100vh-2.81rem)] px-7 max-w-[120rem] mx-auto">
+    <div className="mx-auto  grid h-[calc(100vh-2.81rem)] max-w-[120rem] grid-rows-[auto_1fr] gap-x-9  gap-y-8 px-7 lg:grid-cols-[minmax(0,25rem)_1fr_1fr] lg:gap-y-[7rem]">
       <PageTitle title={title} />
-      <Aside />
+      <Humbarger HumbargerOpen={HumbargerDispatch} isHidden={isHidden} />
+      <Aside isHidden={isHidden} />
       <ConsoleView
         question={
           questionNumber === data.length ? "" : data[questionNumber].question
