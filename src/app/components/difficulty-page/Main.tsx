@@ -29,7 +29,7 @@ const MainPage: FC<Props> = ({ data, title }) => {
   }, [finished, questionNumber, data]);
 
   return (
-    <div className="mx-auto  grid h-[calc(100vh-2.81rem)] max-w-[120rem] grid-rows-[auto_1fr] gap-x-9  gap-y-8 px-7 lg:grid-cols-[minmax(0,25rem)_1fr_1fr] lg:gap-y-[7rem]">
+    <div className="mx-auto  grid h-[calc(100dvh-2.81rem)] max-w-[120rem] grid-rows-[auto_1fr] gap-x-9  gap-y-8 px-7 lg:grid-cols-[minmax(0,25rem)_1fr_1fr] lg:gap-y-[7rem]">
       <PageTitle title={title} />
       <Humbarger HumbargerOpen={HumbargerDispatch} isHidden={isHidden} />
       <Aside isHidden={isHidden} />

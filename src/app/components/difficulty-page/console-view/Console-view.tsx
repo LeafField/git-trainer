@@ -116,6 +116,8 @@ const ConsoleView: FC<Props> = ({
               id="console"
               className="flex-1 bg-transparent outline-none"
               ref={consoleRef}
+              autoCapitalize="off"
+              autoComplete="off"
             />
           </form>
         )}
@@ -134,6 +136,8 @@ const ConsoleView: FC<Props> = ({
                 id="consoleInput"
                 className="ml-1 bg-transparent outline-none"
                 ref={nextRef}
+                autoCapitalize="off"
+                autoComplete="off"
               />
             </form>
           </div>
