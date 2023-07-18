@@ -1,9 +1,7 @@
-import { render, screen } from "@testing-library/react";
-import { composeStories } from "@storybook/testing-react";
-import * as story from "./Selected.stories";
+import { render, screen, waitFor } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import * as Router from "next/navigation";
-
-const { SelectedStory } = composeStories(story);
+import Selected from "./Selected";
 
 jest.mock("next/navigation");
 
@@ -21,8 +19,17 @@ const mockRouter = (mockCallback?: () => {}) => {
 describe("Selectedの結合テスト", () => {
   it("Selectedが正しくレンダリングされているか", async () => {
     mockRouter();
-    const { container } = render(<SelectedStory />);
+    const { container } = render(<Selected />);
     expect(screen.getByText("初級編:GitHub Flow")).toBeInTheDocument();
     expect(container).toMatchSnapshot();
+  });
+
+  it("クリック時にローディングアニメーションが流れるか", async () => {
+    mockRouter();
+    render(<Selected />);
+    await userEvent.click(screen.getByText("初級編:GitHub Flow"));
+    waitFor(() => {
+      expect(screen.getByTestId("nowloading")).toBeInTheDocument();
+    });
   });
 });
