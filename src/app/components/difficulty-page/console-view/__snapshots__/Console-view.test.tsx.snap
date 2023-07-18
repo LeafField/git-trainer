@@ -65,6 +65,7 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
         <input
           autocapitalize="off"
           autocomplete="off"
+          autocorrect="off"
           class="flex-1 bg-transparent outline-none"
           id="console"
           name="console"
@@ -89,6 +90,7 @@ exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、�
           <input
             autocapitalize="off"
             autocomplete="off"
+            autocorrect="off"
             class="ml-1 bg-transparent outline-none"
             id="consoleInput"
             type="text"
@@ -132,6 +134,7 @@ exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に�
         <input
           autocapitalize="off"
           autocomplete="off"
+          autocorrect="off"
           class="flex-1 bg-transparent outline-none"
           id="console"
           name="console"

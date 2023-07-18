@@ -118,6 +118,7 @@ const ConsoleView: FC<Props> = ({
               ref={consoleRef}
               autoCapitalize="off"
               autoComplete="off"
+              autoCorrect="off"
             />
           </form>
         )}
@@ -138,6 +139,7 @@ const ConsoleView: FC<Props> = ({
                 ref={nextRef}
                 autoCapitalize="off"
                 autoComplete="off"
+                autoCorrect="off"
               />
             </form>
           </div>
