@@ -15,11 +15,16 @@ export type FetchData = {
   answer: string;
 };
 
+export const preload = (title: string) => {
+  void fetcher(title);
+  void fetchTitle(title);
+};
+
 export const fetcher = cache(async (title: string): Promise<FetchData[]> => {
   const data: FetchData[] = [];
   const q = query(
     collection(db, `console`, `${title}`, "practice"),
-    orderBy("id", "asc")
+    orderBy("id", "asc"),
   );
   const querySnapshot = await getDocs(q);
   querySnapshot.forEach((doc) => {
