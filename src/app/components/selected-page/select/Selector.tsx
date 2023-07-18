@@ -6,17 +6,20 @@ type Props = {
   title: string;
   last?: boolean;
   url: string;
+  callback: () => void;
 };
 
-const Selector: FC<Props> = ({ title, last = false, url }) => {
+const Selector: FC<Props> = ({ title, last = false, url, callback }) => {
   return (
     <Link
       href={`/difficulty/${url}`}
       className={`block border-t ${
         last ? "border-b" : ""
-      } border-white text-white text-center text-3xl md:text-4xl py-[2.94rem] cursor-pointer transition-colors hover:text-gray-400`}
+      } cursor-pointer border-white py-[2.94rem] text-center text-3xl text-white transition-colors hover:text-gray-400 md:text-4xl`}
     >
-      {title}
+      <span className="block h-full w-full" onClick={callback}>
+        {title}
+      </span>
     </Link>
   );
 };

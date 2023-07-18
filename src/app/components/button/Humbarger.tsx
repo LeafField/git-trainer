@@ -10,10 +10,11 @@ type Props = {
 const Humbarger: FC<Props> = ({ HumbargerOpen, isHidden }) => {
   return (
     <button
-      className="block w-fit lg:hidden absolute top-1 right-1 z-50"
+      className="absolute right-1 top-1 z-50 block w-fit lg:hidden"
       aria-controls="aside"
       aria-expanded={isHidden ? "false" : "true"}
       onClick={HumbargerOpen}
+      data-testid="humbarger"
     >
       {isHidden ? <Question /> : <Cross />}
     </button>
