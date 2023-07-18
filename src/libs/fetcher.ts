@@ -15,11 +15,6 @@ export type FetchData = {
   answer: string;
 };
 
-export const preload = (title: string) => {
-  void fetcher(title);
-  void fetchTitle(title);
-};
-
 export const fetcher = cache(async (title: string): Promise<FetchData[]> => {
   const data: FetchData[] = [];
   const q = query(
