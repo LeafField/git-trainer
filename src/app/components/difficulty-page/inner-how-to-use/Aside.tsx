@@ -26,8 +26,7 @@ const Aside: FC<Props> = ({ isHidden }) => {
 
   return (
     <aside
-      className="absolute inset-0 col-start-1 col-end-2 row-start-2 row-end-3 bg-consoleHeader px-4 pt-[6rem] text-white transition-all
-       duration-300 ease-in-out aria-hidden:invisible  aria-hidden:opacity-0 lg:visible lg:static lg:bg-inherit lg:px-0 lg:pt-0"
+      className="absolute inset-0 col-start-1 col-end-2 row-start-2 row-end-3 bg-consoleHeader px-4 pt-[6rem] text-white transition-all duration-300 ease-in-out aria-hidden:invisible  aria-hidden:opacity-0 lg:visible lg:static lg:bg-inherit lg:px-0 lg:pt-0"
       aria-hidden={isMobile ? `${isHidden}` : "false"}
       id="aside"
       data-testid="aside"
