@@ -3,7 +3,7 @@ import { Metadata } from "next";
 import { fetcher, fetchTitle } from "../../../libs/fetcher";
 import MainPage from "../../components/difficulty-page/Main";
 
-export const revalidate = 60;
+export const revalidate = 0;
 
 export const generateMetadata = async ({
   params,

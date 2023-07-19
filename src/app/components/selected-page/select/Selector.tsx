@@ -15,9 +15,9 @@ const Selector: FC<Props> = ({ title, last = false, url, callback }) => {
       href={`/difficulty/${url}`}
       className={`block border-t ${
         last ? "border-b" : ""
-      } cursor-pointer border-white py-[2.94rem] text-center text-3xl text-white transition-colors hover:text-gray-400 md:text-4xl`}
+      }  cursor-pointer border-white text-center text-3xl text-white transition-colors hover:text-gray-400 md:text-4xl`}
     >
-      <span className="block h-full w-full" onClick={callback}>
+      <span className="block h-full w-full py-[2.94rem]" onClick={callback}>
         {title}
       </span>
     </Link>
