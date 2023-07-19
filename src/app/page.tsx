@@ -13,7 +13,7 @@ export const metadata: Metadata = {
       "Gitコマンドを手軽に空打ちできるサイトです。Git学習後の練習にどうぞ",
     type: "website",
     url: "https://git-empty.vercel.app/",
-    images: "https://git-empty.vercel.app/public/howto.jpg",
+    siteName: "Git Empty",
   },
 };
 
