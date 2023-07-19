@@ -27,6 +27,13 @@ exports[`Asideの単体テスト Asideのスナップショットテスト 1`] =
       <br />
       例:git add .
     </p>
+    <p
+      class="mt-4"
+    >
+      「-m」等のオプションは打たないでください
+      <br />
+      例:git commit
+    </p>
   </aside>
 </div>
 `;

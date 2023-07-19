@@ -27,7 +27,7 @@ const HowToPage = () => {
           <p>
             コンソール上部にGitの練習課題が表示されるので該当するgitコマンドを入力してEnterを押してください。
           </p>
-          <p>分からない時は右上の検索窓から検索してみてください。</p>
+          <p>分からない時はGoogle等で検索してみてください。</p>
         </div>
 
         <div className="mt-[5.62rem] text-white">
@@ -43,6 +43,11 @@ const HowToPage = () => {
             フォルダ名を指定する場合は「.」と打ってください
             <br />
             例:git add .
+          </p>
+          <p className="mt-4 text-base">
+            「-m」等のオプションは打たないでください
+            <br />
+            例:git commit
           </p>
         </div>
         <div className="mx-auto mt-[5.62rem] w-fit">
