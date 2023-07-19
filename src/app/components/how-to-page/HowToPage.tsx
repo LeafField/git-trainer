@@ -47,7 +47,7 @@ const HowToPage = () => {
           <p className="mt-4 text-base">
             「-m」等のオプションは打たないでください
             <br />
-            例:git commit -m "first commit" → git commit
+            例:git commit
           </p>
         </div>
         <div className="mx-auto mt-[5.62rem] w-fit">
