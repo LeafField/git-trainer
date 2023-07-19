@@ -42,6 +42,11 @@ const Aside: FC<Props> = ({ isHidden }) => {
         <br />
         例:git add .
       </p>
+      <p className="mt-4">
+        「-m」等のオプションは打たないでください
+        <br />
+        例:git commit -m "first commit" → git commit
+      </p>
     </aside>
   );
 };

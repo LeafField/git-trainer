@@ -15,6 +15,9 @@ export const metadata: Metadata = {
     url: "https://git-empty.vercel.app/",
     siteName: "Git Empty",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 const Home: NextPage = () => {

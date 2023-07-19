@@ -33,19 +33,19 @@ describe("ConsoleViewの単体テスト", () => {
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
-      />
+      />,
     );
     expect(
-      screen.getByText("リモートブランチをoriginに登録したい")
+      screen.getByText("リモートブランチをoriginに登録したい"),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("heading", { name: "Git Empty" })
+      screen.getByRole("heading", { name: "Git Empty" }),
     ).toBeInTheDocument();
     expect(
-      screen.getByRole("textbox", { name: "C:users/gitEmpty>" })
+      screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
     ).toBeInTheDocument();
     expect(
-      screen.queryByText("Would you like to start the next problem?(y/n)")
+      screen.queryByText("Would you like to start the next problem?(y/n)"),
     ).not.toBeInTheDocument();
   });
 
@@ -56,19 +56,19 @@ describe("ConsoleViewの単体テスト", () => {
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
-      />
+      />,
     );
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "git remote add origin URL"
+      "git remote add origin URL",
     );
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "{enter}"
+      "{enter}",
     );
     waitFor(() => {
       expect(
-        screen.getByText("Would you like to start the next problem?(y/n)")
+        screen.getByText("Would you like to start the next problem?(y/n)"),
       ).toBeInTheDocument();
       expect(container).toMatchSnapshot();
     });
@@ -77,14 +77,14 @@ describe("ConsoleViewの単体テスト", () => {
       screen.getByRole("textbox", {
         name: "Would you like to start the next problem?(y/n)",
       }),
-      "y"
+      "y",
     );
 
     await userEvent.type(
       screen.getByRole("textbox", {
         name: "Would you like to start the next problem?(y/n)",
       }),
-      "{enter}"
+      "{enter}",
     );
     waitFor(() => {
       expect(mockCallback).toHaveBeenCalled();
@@ -98,29 +98,29 @@ describe("ConsoleViewの単体テスト", () => {
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
-      />
+      />,
     );
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "git remote add origin URL"
+      "git remote add origin URL",
     );
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "{enter}"
+      "{enter}",
     );
 
     await userEvent.type(
       screen.getByRole("textbox", {
         name: "Would you like to start the next problem?(y/n)",
       }),
-      "n"
+      "n",
     );
 
     await userEvent.type(
       screen.getByRole("textbox", {
         name: "Would you like to start the next problem?(y/n)",
       }),
-      "{enter}"
+      "{enter}",
     );
     waitFor(() => {
       expect(mockPush).toHaveBeenCalledWith("/");
@@ -134,29 +134,29 @@ describe("ConsoleViewの単体テスト", () => {
         answer="git remote add origin URL"
         nextCallback={mockCallback}
         finished={false}
-      />
+      />,
     );
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "git remote add origin URL"
+      "git remote add origin URL",
     );
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "{enter}"
+      "{enter}",
     );
 
     await userEvent.type(
       screen.getByRole("textbox", {
         name: "Would you like to start the next problem?(y/n)",
       }),
-      "a"
+      "a",
     );
 
     await userEvent.type(
       screen.getByRole("textbox", {
         name: "Would you like to start the next problem?(y/n)",
       }),
-      "{enter}"
+      "{enter}",
     );
     waitFor(() => {
       expect(mockPush).not.toHaveBeenCalled();
@@ -164,7 +164,7 @@ describe("ConsoleViewの単体テスト", () => {
       expect(
         screen.getByRole("textbox", {
           name: "Would you like to start the next problem?(y/n)",
-        })
+        }),
       ).toHaveValue("");
     });
   });
@@ -176,21 +176,21 @@ describe("ConsoleViewの単体テスト", () => {
         answer="git remote add origin URL"
         nextCallback={mockCallback}
         finished={false}
-      />
+      />,
     );
 
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "git"
+      "git",
     );
 
     await userEvent.type(
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
-      "{enter}"
+      "{enter}",
     );
     waitFor(() => {
       expect(
-        screen.getByText("不正解です！右上の検索バーから正解を検索してみてね！")
+        screen.getByText("不正解です！GoogleやBingで正解を検索してみてね！"),
       ).toBeInTheDocument();
       expect(screen.queryByText("git")).not.toBeInTheDocument();
       expect(container).toMatchSnapshot();
@@ -205,7 +205,7 @@ describe("ConsoleViewの単体テスト", () => {
         question="リモートブランチをoriginに登録したい"
         answer="git remote add origin URL"
         nextCallback={mockCallback}
-      />
+      />,
     );
     jest.runAllTimers();
     expect(screen.getByText("Congratulations!")).toBeInTheDocument();

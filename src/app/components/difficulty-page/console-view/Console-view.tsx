@@ -75,11 +75,17 @@ const ConsoleView: FC<Props> = ({
   }, [consoleRef]);
 
   useEffect(() => {
+    let routerTimer: NodeJS.Timeout;
+
     if (finished) {
-      setTimeout(() => {
+      routerTimer = setTimeout(() => {
         router.push("/difficulty");
       }, 3000);
     }
+
+    return () => {
+      clearTimeout(routerTimer);
+    };
   }, [finished, router]);
 
   return (
@@ -94,7 +100,7 @@ const ConsoleView: FC<Props> = ({
         <p>{question}</p>
         {wrong && (
           <div className="pt-4">
-            不正解です！右上の検索バーから正解を検索してみてね！
+            不正解です！GoogleやBingで正解を検索してみてね！
           </div>
         )}
         {finished && (
