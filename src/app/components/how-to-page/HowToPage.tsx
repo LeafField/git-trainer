@@ -49,6 +49,11 @@ const HowToPage = () => {
             <br />
             例:git commit
           </p>
+          <p className="mt-4">
+            現在、コマンドの判定がシビアになっています。
+            <br />
+            コマンドの半角スペースは一個のみ、コマンドの最後にスペースが入らないように注意してください。
+          </p>
         </div>
         <div className="mx-auto mt-[5.62rem] w-fit">
           <Button title="Let's Play!" link="/difficulty" color="primary" />
