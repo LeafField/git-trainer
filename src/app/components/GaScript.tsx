@@ -19,8 +19,9 @@ const GaScript = () => {
           <Script
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
             strategy="afterInteractive"
+            id="ga-load"
           />
-          <Script>
+          <Script id="ga-load-script">
             {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}

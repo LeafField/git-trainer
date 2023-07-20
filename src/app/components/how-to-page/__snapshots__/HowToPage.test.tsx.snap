@@ -69,6 +69,13 @@ exports[`HowToPage HowToPageが正しく表示されているか 1`] = `
           <br />
           例:git commit
         </p>
+        <p
+          class="mt-4"
+        >
+          現在、コマンドの判定がシビアになっています。
+          <br />
+          コマンドの半角スペースは一個のみ、コマンドの最後にスペースが入らないように注意してください。
+        </p>
       </div>
       <div
         class="mx-auto mt-[5.62rem] w-fit"
