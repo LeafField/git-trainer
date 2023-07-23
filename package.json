@@ -10,7 +10,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "test": "jest",
-    "ci": "tsc && next lint && jest"
+    "ci": "tsc && next lint && jest",
+    "playwright": "playwright test"
   },
   "dependencies": {
     "@emotion/react": "^11.11.1",
@@ -33,6 +34,7 @@
     "zustand": "^4.3.9"
   },
   "devDependencies": {
+    "@playwright/test": "^1.36.1",
     "@storybook/addon-actions": "^7.1.0",
     "@storybook/addon-essentials": "^7.1.0",
     "@storybook/addon-interactions": "^7.1.0",
