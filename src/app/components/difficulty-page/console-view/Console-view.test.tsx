@@ -190,7 +190,7 @@ describe("ConsoleViewの単体テスト", () => {
     );
     waitFor(() => {
       expect(
-        screen.getByText("不正解です！GoogleやBingで正解を検索してみてね！"),
+        screen.getByText("不正解です！正解は「git remote add origin URL」です"),
       ).toBeInTheDocument();
       expect(screen.queryByText("git")).not.toBeInTheDocument();
       expect(container).toMatchSnapshot();

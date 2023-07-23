@@ -99,9 +99,7 @@ const ConsoleView: FC<Props> = ({
       <div className="min-h-full bg-console px-3 pt-7">
         <p>{question}</p>
         {wrong && (
-          <div className="pt-4">
-            不正解です！GoogleやBingで正解を検索してみてね！
-          </div>
+          <div className="pt-4">不正解です！正解は「{answer}」です</div>
         )}
         {finished && (
           <div className="pt-4">
