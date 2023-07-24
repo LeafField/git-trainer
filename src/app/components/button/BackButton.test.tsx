@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import { composeStories } from "@storybook/testing-react";
-import * as Stories from "./BackButton.stories";
+import { composeStories } from "@storybook/react";
+import * as stories from "./BackButton.stories";
 
-const { BackButtonTemplate } = composeStories(Stories);
+const { BackButtonTemplate } = composeStories(stories);
 
 test("BackButtonがきちんとレンダリングされているか", () => {
   const { container } = render(<BackButtonTemplate />);
