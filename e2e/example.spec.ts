@@ -13,9 +13,9 @@ test("各ページが正しくレンダリングされているか", async ({ pa
   await page.getByRole("link", { name: "Let's Play!" }).click();
   await expect(page.getByRole("heading", { name: "難易度選択" })).toBeVisible();
   await page.getByRole("link", { name: "初級編:GitHub Flow" }).click();
-  await expect(page).toHaveTitle("初級編:Git Hub Flow | Git Empty");
+  await expect(page).toHaveTitle("初級編:GitHub Flow | Git Empty");
   await expect(
-    page.getByRole("heading", { name: "初級編:Git Hub Flow" }),
+    page.getByRole("heading", { name: "初級編:GitHub Flow" }),
   ).toBeVisible();
   await expect(
     page.getByText("Git Hubのリポジトリをローカルにクローンしたい"),
