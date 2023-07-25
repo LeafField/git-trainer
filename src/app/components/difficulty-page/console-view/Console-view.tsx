@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 type Props = {
   question: string;
   answer: string;
-  nextCallback: () => void;
+  nextCallback: (roop?: boolean) => void;
   finished: boolean;
 };
 
@@ -16,16 +16,15 @@ const ConsoleView: FC<Props> = ({
   finished,
 }) => {
   const [wrong, setWrong] = useState<boolean>(false);
-  const [next, setNext] = useState<boolean>(false);
 
   const consoleRef = useRef<HTMLInputElement>(null);
-  const nextRef = useRef<HTMLInputElement>(null);
+  const finalRef = useRef<HTMLInputElement>(null);
 
   const router = useRouter();
 
   const clickConsole = () => {
-    if (next) {
-      nextRef.current?.focus();
+    if (finished) {
+      finalRef.current?.focus();
     } else {
       consoleRef.current?.focus();
     }
@@ -35,58 +34,35 @@ const ConsoleView: FC<Props> = ({
     e.preventDefault();
     const verifying = consoleRef.current?.value !== answer;
     setWrong(verifying);
+    consoleRef.current!.value = "";
 
     if (!verifying) {
-      setNext(true);
-      setTimeout(() => {
-        nextRef.current?.focus();
-      }, 100);
-    } else {
-      consoleRef.current!.value = "";
+      nextCallback();
     }
   };
 
-  const handleNext = (e: React.FormEvent<HTMLFormElement>) => {
+  const finalSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    switch (nextRef.current?.value) {
+    switch (finalRef.current?.value) {
       case "y":
-        nextCallback();
-        setNext(false);
-        consoleRef.current!.value = "";
-        setTimeout(() => {
-          if (!finished) {
-            consoleRef.current?.focus();
-          }
-        }, 100);
+        nextCallback(true);
         break;
-
       case "n":
-        router.push("/");
+        router.push("/difficulty");
         break;
-
       default:
-        nextRef.current!.value = "";
+        finalRef.current!.value = "";
         break;
     }
   };
 
   useEffect(() => {
-    consoleRef.current?.focus();
-  }, [consoleRef]);
-
-  useEffect(() => {
-    let routerTimer: NodeJS.Timeout;
-
     if (finished) {
-      routerTimer = setTimeout(() => {
-        router.push("/difficulty");
-      }, 3000);
+      finalRef.current?.focus();
+    } else {
+      consoleRef.current?.focus();
     }
-
-    return () => {
-      clearTimeout(routerTimer);
-    };
-  }, [finished, router]);
+  }, [consoleRef, finished]);
 
   return (
     <main
@@ -106,6 +82,21 @@ const ConsoleView: FC<Props> = ({
             <p className="text-xl font-bold">Congratulations!</p>
             <p className="pt-2">ここまで遊んでくれてありがとうございます</p>
             <p>是非他の難易度も遊んでみてください</p>
+            <form
+              className="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
+              onSubmit={finalSubmit}
+            >
+              <label htmlFor="finishInput">
+                もう一度同じ難易度で遊びますか？{`(y/n)`}
+              </label>
+              <input
+                type="text"
+                name=""
+                id="finishInput"
+                className="bg-transparent outline-none"
+                ref={finalRef}
+              />
+            </form>
           </div>
         )}
         {finished || (
@@ -125,28 +116,6 @@ const ConsoleView: FC<Props> = ({
               autoCorrect="off"
             />
           </form>
-        )}
-        {next && (
-          <div className="pt-4">
-            <p>Congratulations, you are correct!</p>
-            <form
-              onSubmit={handleNext}
-              className="flex max-w-full flex-col sm:flex-row"
-            >
-              <label htmlFor="consoleInput">
-                Would you like to start the next problem?{"(y/n)"}
-              </label>
-              <input
-                type="text"
-                id="consoleInput"
-                className="ml-1 bg-transparent outline-none"
-                ref={nextRef}
-                autoCapitalize="off"
-                autoComplete="off"
-                autoCorrect="off"
-              />
-            </form>
-          </div>
         )}
       </div>
     </main>

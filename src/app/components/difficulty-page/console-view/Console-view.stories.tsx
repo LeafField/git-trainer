@@ -41,3 +41,12 @@ export const ConsoleViewStory: Story = {
     nextCallback: () => {},
   },
 };
+
+export const ConsoleViewFinishedStory: Story = {
+  args: {
+    question: "",
+    answer: "",
+    nextCallback: () => {},
+    finished: true,
+  },
+};
