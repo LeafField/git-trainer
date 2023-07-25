@@ -12,15 +12,21 @@ type Props = {
 };
 
 const MainPage: FC<Props> = ({ data, title }) => {
-  const [questionNumber, dispatch] = useReducer(
-    (state: number) => state + 1,
-    0,
-  );
+  const [questionNumber, setQuestionNumber] = useState<number>(0);
   const [isHidden, HumbargerDispatch] = useReducer(
     (state: boolean) => !state,
     true,
   );
   const [finished, setFinished] = useState<boolean>(false);
+
+  const nextCallback: (roop?: boolean) => void = (roop = false) => {
+    if (roop) {
+      setQuestionNumber(0);
+      setFinished(false);
+    } else {
+      setQuestionNumber(questionNumber + 1);
+    }
+  };
 
   useEffect(() => {
     if (questionNumber === data.length) {
@@ -40,7 +46,7 @@ const MainPage: FC<Props> = ({ data, title }) => {
         answer={
           questionNumber === data.length ? "" : data[questionNumber].answer
         }
-        nextCallback={dispatch}
+        nextCallback={nextCallback}
         finished={finished}
       />
     </div>

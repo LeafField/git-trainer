@@ -39,7 +39,7 @@ describe("Main.tsxの結合テスト", () => {
     ).toBeInTheDocument();
   });
 
-  it("dummyDataに対して回答した際、router.pushが呼ばれるか", async () => {
+  it("dummyDataに対して回答した後、もう一度遊ぶかへの回答でnと入力した際にrouter.pushが呼ばれるか", async () => {
     mockRouter(mockPush);
     render(<MainPage data={dummyData} title="初級編:GitHub Flow" />);
     await userEvent.type(
@@ -50,26 +50,102 @@ describe("Main.tsxの結合テスト", () => {
       screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
       "{enter}",
     );
+
     waitFor(() => {
       expect(
-        screen.getByText("Congratulations, you are correct!"),
+        screen.getByText("もう一度同じ難易度で遊びますか？(y/n)"),
       ).toBeInTheDocument();
     });
 
     await userEvent.type(
       screen.getByRole("textbox", {
-        name: "Would you like to start the next problem?(y/n)",
+        name: "もう一度同じ難易度で遊びますか？(y/n)",
       }),
-      "y",
+      "n",
     );
+
     await userEvent.type(
       screen.getByRole("textbox", {
-        name: "Would you like to start the next problem?(y/n)",
+        name: "もう一度同じ難易度で遊びますか？(y/n)",
       }),
       "{enter}",
     );
+
     waitFor(() => {
-      expect(mockPush).toHaveBeenCalled();
+      expect(mockPush).toBeCalledTimes(1);
+    });
+  });
+
+  it("dummyDataに対して回答した後、もう一度遊ぶかへの回答でyと入力した際に再び問題が表示されるかどうか", async () => {
+    render(<MainPage data={dummyData} title="初級編:GitHub Flow" />);
+    await userEvent.type(
+      screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
+      "git clone URL",
+    );
+    await userEvent.type(
+      screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
+      "{enter}",
+    );
+
+    waitFor(() => {
+      expect(
+        screen.getByText("もう一度同じ難易度で遊びますか？(y/n)"),
+      ).toBeInTheDocument();
+    });
+
+    await userEvent.type(
+      screen.getByRole("textbox", {
+        name: "もう一度同じ難易度で遊びますか？(y/n)",
+      }),
+      "y",
+    );
+
+    await userEvent.type(
+      screen.getByRole("textbox", {
+        name: "もう一度同じ難易度で遊びますか？(y/n)",
+      }),
+      "{enter}",
+    );
+
+    waitFor(() => {
+      expect(
+        screen.getByText(
+          "GitHubのリモートリポジトリをローカルにクローンしたい",
+        ),
+      ).toBeInTheDocument();
+    });
+  });
+
+  it("異常系:dummyDataに正解した後の回答でyでもnでもない文字を入力した際、入力がリセットされるかどうか", async () => {
+    render(<MainPage data={dummyData} title="初級編:GitHub Flow" />);
+    await userEvent.type(
+      screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
+      "git clone URL",
+    );
+    await userEvent.type(
+      screen.getByRole("textbox", { name: "C:users/gitEmpty>" }),
+      "{enter}",
+    );
+
+    await userEvent.type(
+      screen.getByRole("textbox", {
+        name: "もう一度同じ難易度で遊びますか？(y/n)",
+      }),
+      "a",
+    );
+    await userEvent.type(
+      screen.getByRole("textbox", {
+        name: "もう一度同じ難易度で遊びますか？(y/n)",
+      }),
+      "{enter}",
+    );
+
+    waitFor(() => {
+      expect(
+        screen.getByRole("textbox", {
+          name: "もう一度同じ難易度で遊びますか？(y/n)",
+        }),
+      ).toHaveDisplayValue("");
     });
   });
 

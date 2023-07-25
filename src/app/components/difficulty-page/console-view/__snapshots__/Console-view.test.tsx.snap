@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセージが流れ、router.pushが発火するか 1`] = `
+exports[`ConsoleViewの単体テスト consoleView初期状態のスナップショットテスト 1`] = `
 <div>
   <main
     class="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
@@ -16,6 +16,43 @@ exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセー�
       <p>
         リモートブランチをoriginに登録したい
       </p>
+      <form
+        class="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
+      >
+        <label
+          for="console"
+        >
+          C:users/gitEmpty&gt;
+        </label>
+        <input
+          autocapitalize="off"
+          autocomplete="off"
+          autocorrect="off"
+          class="flex-1 bg-transparent outline-none"
+          id="console"
+          name="console"
+          type="text"
+        />
+      </form>
+    </div>
+  </main>
+</div>
+`;
+
+exports[`ConsoleViewの単体テスト consoleView終了状態のスナップショットテスト 1`] = `
+<div>
+  <main
+    class="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
+  >
+    <h2
+      class="h-6 bg-consoleHeader pl-3 text-base text-white"
+    >
+      Git Empty
+    </h2>
+    <div
+      class="min-h-full bg-console px-3 pt-7"
+    >
+      <p />
       <div
         class="pt-4"
       >
@@ -32,117 +69,23 @@ exports[`ConsoleViewの単体テスト 正常系:全問正解後にメッセー�
         <p>
           是非他の難易度も遊んでみてください
         </p>
-      </div>
-    </div>
-  </main>
-</div>
-`;
-
-exports[`ConsoleViewの単体テスト 正常系:課題に正解した場合、次の課題に進むためのコールバック関数が発火するか 1`] = `
-<div>
-  <main
-    class="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
-  >
-    <h2
-      class="h-6 bg-consoleHeader pl-3 text-base text-white"
-    >
-      Git Empty
-    </h2>
-    <div
-      class="min-h-full bg-console px-3 pt-7"
-    >
-      <p>
-        リモートブランチをoriginに登録したい
-      </p>
-      <form
-        class="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
-      >
-        <label
-          for="console"
-        >
-          C:users/gitEmpty&gt;
-        </label>
-        <input
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="flex-1 bg-transparent outline-none"
-          id="console"
-          name="console"
-          type="text"
-        />
-      </form>
-      <div
-        class="pt-4"
-      >
-        <p>
-          Congratulations, you are correct!
-        </p>
         <form
-          class="flex max-w-full flex-col sm:flex-row"
+          class="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
         >
           <label
-            for="consoleInput"
+            for="finishInput"
           >
-            Would you like to start the next problem?
+            もう一度同じ難易度で遊びますか？
             (y/n)
           </label>
           <input
-            autocapitalize="off"
-            autocomplete="off"
-            autocorrect="off"
-            class="ml-1 bg-transparent outline-none"
-            id="consoleInput"
+            class="bg-transparent outline-none"
+            id="finishInput"
+            name=""
             type="text"
           />
         </form>
       </div>
-    </div>
-  </main>
-</div>
-`;
-
-exports[`ConsoleViewの単体テスト 異常系:問題に不正解の場合に、不正解のメッセージが表示されるか 1`] = `
-<div>
-  <main
-    class="row-start-2 h-[29.125rem] max-w-[62.5rem] cursor-text overflow-hidden rounded-lg border border-consoleHeader text-[rgb(204,204,204)] lg:col-span-4 lg:col-start-2"
-  >
-    <h2
-      class="h-6 bg-consoleHeader pl-3 text-base text-white"
-    >
-      Git Empty
-    </h2>
-    <div
-      class="min-h-full bg-console px-3 pt-7"
-    >
-      <p>
-        リモートブランチをoriginに登録したい
-      </p>
-      <div
-        class="pt-4"
-      >
-        不正解です！正解は「
-        git remote add origin URL
-        」です
-      </div>
-      <form
-        class="mt-6 flex max-w-full flex-col gap-1 sm:flex-row"
-      >
-        <label
-          for="console"
-        >
-          C:users/gitEmpty&gt;
-        </label>
-        <input
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="flex-1 bg-transparent outline-none"
-          id="console"
-          name="console"
-          type="text"
-        />
-      </form>
     </div>
   </main>
 </div>
