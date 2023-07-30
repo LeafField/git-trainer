@@ -15,7 +15,7 @@ exports[`HowToPage HowToPageが正しく表示されているか 1`] = `
     >
       <img
         alt="Git Emptyの遊び方参考画像"
-        class="h-auto w-full transition-all"
+        class="h-auto w-full transition-all duration-500"
         data-nimg="1"
         decoding="async"
         fetchpriority="high"
@@ -23,7 +23,7 @@ exports[`HowToPage HowToPageが正しく表示されているか 1`] = `
         sizes="100vw"
         src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
         srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-        style="color: transparent; object-fit: cover; transition: all 0.25s ease-in-out; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
+        style="color: transparent; object-fit: cover; background-size: cover; background-position: 50% 50%; background-repeat: no-repeat;"
         width="1605"
       />
     </figure>

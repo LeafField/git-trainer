@@ -18,13 +18,18 @@ const Selected = () => {
       </h1>
       <div className="mt-[8%]">
         <Selector title="初級編:GitHub Flow" url="flow" callback={dispatch} />
-        <Selector title="中級編:制作中" url="dummy" callback={dispatch} />
         <Selector
+          title="中級編:Other Commands"
+          url="other"
+          callback={dispatch}
+          last={true}
+        />
+        {/* <Selector
           title="上級編:制作中"
           last={true}
           url="dummy"
           callback={dispatch}
-        />
+        /> */}
       </div>
     </main>
   );
