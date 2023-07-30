@@ -16,7 +16,7 @@ Gitコマンドを空打ちして練習するアプリ
 - Firebase
 - Jest
 - Playwright
-- Storybook
+- StorybGitHub Actionsctions
 
 ## 反省点
 
