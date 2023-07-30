@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Git Empty
 
-## Getting Started
+## アプリ概要
 
-First, run the development server:
+Gitコマンドを空打ちして練習するアプリ  
+主なメインターゲットは私同様、未経験～駆け出しエンジニア
+元々は寿司打のエンジニアバージョンを想定していましたが、
+メインのターゲット層から分からないコマンドがあった時はゆっくり調べてほしい
+という想いで時間制限なく遊べるアプリにしました
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+## 主な使用技術
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- TypeScript
+- Next.js(App Router)
+- Tailwind CSS
+- Firebase
+- Jest
+- Playwright
+- Storybook
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 反省点
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+アプリ設計の経験がなく、画面デザインのみの見切り発車で開発を始めてしまったためか
+何度も作り直しをしてしまい想定以上に時間が掛かってしまいました
+また、当初の予定ではインタラクション周りの制御をzustandを使って行うつもりだったが
+シンプルなアプリの実装に対してコードが複雑化してしまう為、シンプルにpropsで制御用関数を親コンポーネントから渡す形にしました
+Figmaを使って初めてデザインに挑戦しましたが、Figma上の見た目の実際に実装した時の印象の違いが大きく何度も修正する事になってしまったので、Figmaは要練習
+Storybookを使っていたので、細かい修正はやりやすかったです
 
-## Learn More
+## 今後の改良点
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+頻繁に表示されるデータが更新されるこのアプリでは、App RouterのReact cacheを使うよりも素直にCSRでデータフェッチを行い、FirebaseのJavascript SDKをroute handlerに隠蔽する設計の方が良かったかもしれないのでver2に向けてどちらの方がいいかパフォーマンステストを行っていきたいです
+また、問題が中級編までしか無いので何か思いついたら上級編を実装する予定です
+問題のデータをFirebaseに置いている理由でもありますが、最悪フロントエンドを一から再設計して作り直すかも？
