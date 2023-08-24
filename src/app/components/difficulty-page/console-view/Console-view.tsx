@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 type Props = {
   question: string;
   answer: string;
+  answer2?: string;
   nextCallback: (roop?: boolean) => void;
   finished: boolean;
 };
@@ -12,6 +13,7 @@ type Props = {
 const ConsoleView: FC<Props> = ({
   question,
   answer,
+  answer2,
   nextCallback,
   finished,
 }) => {
@@ -32,7 +34,9 @@ const ConsoleView: FC<Props> = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const verifying = consoleRef.current?.value !== answer;
+    const verifying =
+      consoleRef.current?.value !== answer &&
+      consoleRef.current?.value !== answer2;
     setWrong(verifying);
     consoleRef.current!.value = "";
 
@@ -75,7 +79,10 @@ const ConsoleView: FC<Props> = ({
       <div className="min-h-full bg-console px-3 pt-7">
         <p>{question}</p>
         {wrong && (
-          <div className="pt-4">不正解です！正解は「{answer}」です</div>
+          <div className="pt-4">
+            不正解です！正解は「{answer}」{answer2 && `もしくは「${answer2}」`}
+            です
+          </div>
         )}
         {finished && (
           <div className="pt-4">

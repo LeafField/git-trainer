@@ -46,6 +46,9 @@ const MainPage: FC<Props> = ({ data, title }) => {
         answer={
           questionNumber === data.length ? "" : data[questionNumber].answer
         }
+        answer2={
+          questionNumber === data.length ? "" : data[questionNumber].answer2
+        }
         nextCallback={nextCallback}
         finished={finished}
       />
