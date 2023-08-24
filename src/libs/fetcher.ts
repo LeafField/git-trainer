@@ -13,6 +13,7 @@ export type FetchData = {
   id: number;
   question: string;
   answer: string;
+  answer2?: string;
 };
 
 export const fetcher = cache(async (title: string): Promise<FetchData[]> => {
