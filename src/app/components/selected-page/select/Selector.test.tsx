@@ -5,12 +5,7 @@ import Selector from "./Selector";
 describe("Selectorのレンダリングテスト", () => {
   test("レンダリング位置が最後以外", () => {
     render(
-      <Selector
-        callback={() => {}}
-        title="初級編:GitHub Flow"
-        last={false}
-        url="/console/flow"
-      />,
+      <Selector title="初級編:GitHub Flow" last={false} url="/console/flow" />,
     );
     expect(
       screen.getByRole("link", { name: "初級編:GitHub Flow" }),
@@ -22,12 +17,7 @@ describe("Selectorのレンダリングテスト", () => {
 
   test("レンダリング位置が最後", () => {
     render(
-      <Selector
-        callback={() => {}}
-        title="初級編:GitHub Flow"
-        last={true}
-        url="/console/flow"
-      />,
+      <Selector title="初級編:GitHub Flow" last={true} url="/console/flow" />,
     );
     expect(screen.getByText("初級編:GitHub Flow")).toBeInTheDocument();
     expect(
@@ -36,13 +26,7 @@ describe("Selectorのレンダリングテスト", () => {
   });
 
   test("lastを指定しない", () => {
-    render(
-      <Selector
-        callback={() => {}}
-        title="初級編:GitHub Flow"
-        url="/console/flow"
-      />,
-    );
+    render(<Selector title="初級編:GitHub Flow" url="/console/flow" />);
     expect(
       screen.getByRole("link", { name: "初級編:GitHub Flow" }),
     ).not.toHaveClass("border-b");
