@@ -74,8 +74,9 @@ describe("ConsoleViewの単体テスト", () => {
     render(
       <ConsoleView
         finished={false}
-        question="リモートブランチをoriginに登録したい"
-        answer="git remote add origin URL"
+        question="featureブランチに移動したい"
+        answer="git checkout feature"
+        answer2="git switch feature"
         nextCallback={mockCallback}
       />,
     );
@@ -85,9 +86,11 @@ describe("ConsoleViewの単体テスト", () => {
       "{enter}",
     );
 
-    waitFor(() => {
+    await waitFor(() => {
       expect(
-        screen.getByText("不正解です！正解は「git remote add origin URL」です"),
+        screen.getByText(
+          "不正解です！正解は「git checkout feature」もしくは「git switch feature」です",
+        ),
       ).toBeInTheDocument();
     });
   });

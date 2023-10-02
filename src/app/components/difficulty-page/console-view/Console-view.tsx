@@ -102,6 +102,9 @@ const ConsoleView: FC<Props> = ({
                 id="finishInput"
                 className="bg-transparent outline-none"
                 ref={finalRef}
+                autoCapitalize="off"
+                autoComplete="off"
+                autoCorrect="off"
               />
             </form>
           </div>
