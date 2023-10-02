@@ -14,24 +14,16 @@ exports[`Selectedの結合テスト Selectedが正しくレンダリングされ
       class="mt-[8%]"
     >
       <a
-        class="block border-t   cursor-pointer border-white text-center text-3xl text-white transition-colors hover:text-gray-400 md:text-4xl"
+        class="block border-t   cursor-pointer border-white py-[2.94rem] text-center text-3xl text-white transition-colors hover:text-gray-400 md:text-4xl"
         href="/difficulty/flow"
       >
-        <span
-          class="block h-full w-full py-[2.94rem]"
-        >
-          初級編:GitHub Flow
-        </span>
+        初級編:GitHub Flow
       </a>
       <a
-        class="block border-t border-b  cursor-pointer border-white text-center text-3xl text-white transition-colors hover:text-gray-400 md:text-4xl"
+        class="block border-t border-b  cursor-pointer border-white py-[2.94rem] text-center text-3xl text-white transition-colors hover:text-gray-400 md:text-4xl"
         href="/difficulty/other"
       >
-        <span
-          class="block h-full w-full py-[2.94rem]"
-        >
-          中級編:Other Commands
-        </span>
+        中級編:Other Commands
       </a>
     </div>
   </main>

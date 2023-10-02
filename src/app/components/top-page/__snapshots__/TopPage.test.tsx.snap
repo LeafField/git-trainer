@@ -6,7 +6,7 @@ exports[`トップページのレンダリングテスト スナップショッ�
     class="className"
   >
     <div
-      class="flex flex-col justify-center items-center min-h-screen w-full"
+      class="flex min-h-screen w-full flex-col items-center justify-center"
     >
       <div
         class="mx-auto flex flex-col gap-5 md:gap-[2.375rem]"
@@ -23,7 +23,7 @@ exports[`トップページのレンダリングテスト スナップショッ�
         </h1>
       </div>
       <div
-        class="flex mt-32 md:mt-[12.6rem] justify-center gap-16 md:gap-[9.12rem] "
+        class="mt-32 flex justify-center gap-16 md:mt-[12.6rem] md:gap-[9.12rem] "
       >
         <a
           class="text-white block w-fit text-base md:text-2xl rounded-[2.8125rem] py-2 px-5 md:py-4 md:px-10
