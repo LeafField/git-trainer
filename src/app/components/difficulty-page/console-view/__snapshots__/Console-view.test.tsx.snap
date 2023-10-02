@@ -79,6 +79,9 @@ exports[`ConsoleViewの単体テスト consoleView終了状態のスナップシ
             (y/n)
           </label>
           <input
+            autocapitalize="off"
+            autocomplete="off"
+            autocorrect="off"
             class="bg-transparent outline-none"
             id="finishInput"
             name=""
