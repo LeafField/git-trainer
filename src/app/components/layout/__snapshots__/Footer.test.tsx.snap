@@ -6,7 +6,7 @@ exports[`Footerが正しくレンダリングされているか 1`] = `
     class="pb-10"
   >
     <small
-      class="text-white block text-center"
+      class="block text-center text-white"
     >
       Copyright © 2023 LeafField All rights reserved.
     </small>

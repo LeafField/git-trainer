@@ -86,13 +86,14 @@ describe("ConsoleViewの単体テスト", () => {
       "{enter}",
     );
 
-    await waitFor(() => {
-      expect(
-        screen.getByText(
-          "不正解です！正解は「git checkout feature」もしくは「git switch feature」です",
-        ),
-      ).toBeInTheDocument();
-    });
+    // await waitFor(() => {
+
+    // });
+    return expect(
+      await screen.findByText(
+        "不正解です！正解は「git checkout feature」もしくは「git switch feature」です",
+      ),
+    ).toBeInTheDocument();
   });
 
   it("consoleView初期状態のスナップショットテスト", () => {

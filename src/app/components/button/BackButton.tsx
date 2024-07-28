@@ -7,10 +7,10 @@ import backImage from "../../../../public/Arrow.png";
 const BackButton = () => {
   return (
     <Link
-      className="w-[8.5625rem] h-[2.8125rem] flex justify-center items-center border border-white"
+      className="flex h-[2.8125rem] w-[8.5625rem] items-center justify-center border border-white"
       href="/"
     >
-      <figure className="w-[74px] h-[23px] relative transition-all hover:translate-x-[-10px] hover:scale-x-[1.1]">
+      <figure className="relative h-[23px] w-[74px] transition-all hover:translate-x-[-10px] hover:scale-x-[1.1]">
         <Image
           src={backImage}
           alt="トップページに戻るボタン"

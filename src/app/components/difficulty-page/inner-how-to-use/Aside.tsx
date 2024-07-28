@@ -47,11 +47,6 @@ const Aside: FC<Props> = ({ isHidden }) => {
         <br />
         例:git commit
       </p>
-      <p className="mt-4">
-        現在、コマンドの判定がシビアになっています。
-        <br />
-        コマンドの半角スペースは一個のみ、コマンドの最後にスペースが入らないように注意してください。
-      </p>
     </aside>
   );
 };

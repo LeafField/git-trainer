@@ -11,11 +11,11 @@ type Props = {
 const Button: FC<Props> = ({ title, link, color = "primary" }) => {
   return (
     <Link
-      className={`text-white block w-fit text-base md:text-2xl rounded-[2.8125rem] py-2 px-5 md:py-4 md:px-10
-      font-normal hover:after:content-[""] hover:after:bg-white after:transition-all after:block
-      after:h-[1px] after:w-full after:scale-0 hover:after:scale-100
+      className={`block w-fit rounded-[2.8125rem] px-5 py-2 text-base font-normal text-white after:block after:h-[1px]
+      after:w-full after:scale-0 after:transition-all hover:after:scale-100 hover:after:bg-white
+      hover:after:content-[""] md:px-10 md:py-4 md:text-2xl
       ${color === "primary" && "bg-primary"} ${
-        color === "secondary" && "border-white border"
+        color === "secondary" && "border border-white"
       }`}
       href={`${link}`}
     >

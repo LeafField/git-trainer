@@ -4,10 +4,10 @@ import Button from "./Button";
 describe("Buttonのレンダリングテスト", () => {
   test("primaryのレンダリングテスト", () => {
     const { container } = render(
-      <Button color="primary" link="/difficulty" title="Let's Play!" />
+      <Button color="primary" link="/difficulty" title="Let's Play!" />,
     );
     expect(
-      screen.getByRole("link", { name: "Let's Play!" })
+      screen.getByRole("link", { name: "Let's Play!" }),
     ).toBeInTheDocument();
     expect(screen.getByRole("link")).toHaveAttribute("href", "/difficulty");
     expect(container).toMatchSnapshot();
@@ -15,10 +15,10 @@ describe("Buttonのレンダリングテスト", () => {
 
   test("secondaryのレンダリングテスト", () => {
     const { container } = render(
-      <Button link="/howto" title="How to use" color="secondary" />
+      <Button link="/howto" title="How to use" color="secondary" />,
     );
     expect(
-      screen.getByRole("link", { name: "How to use" })
+      screen.getByRole("link", { name: "How to use" }),
     ).toBeInTheDocument();
     expect(screen.getByRole("link")).toHaveAttribute("href", "/howto");
     expect(container).toMatchSnapshot();

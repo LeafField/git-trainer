@@ -8,7 +8,7 @@ describe("Asideの単体テスト", () => {
   it("Asideのタイトルが正しく表示されているか", () => {
     render(<Aside isHidden={false} />);
     expect(
-      screen.getByText("フォルダ名、リモート名などの注意")
+      screen.getByText("フォルダ名、リモート名などの注意"),
     ).toBeInTheDocument();
   });
 

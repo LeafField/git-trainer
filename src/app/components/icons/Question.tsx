@@ -8,7 +8,7 @@ const Question = () => {
       viewBox="0 0 24 24"
       strokeWidth="1.5"
       stroke="currentColor"
-      className="w-11 h-11 text-white hover:text-gray-300"
+      className="h-11 w-11 text-white hover:text-gray-300"
     >
       <path
         strokeLinecap="round"

@@ -34,9 +34,13 @@ const ConsoleView: FC<Props> = ({
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const verifying =
-      consoleRef.current?.value !== answer &&
-      consoleRef.current?.value !== answer2;
+    const value = consoleRef.current?.value.trim();
+    const str = value
+      ?.split(" ")
+      .filter((value) => value.length > 0)
+      .reduce((prev, curr) => prev + " " + curr, "")
+      .trim();
+    const verifying = str !== answer && str !== answer2;
     setWrong(verifying);
     consoleRef.current!.value = "";
 

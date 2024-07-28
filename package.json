@@ -11,7 +11,8 @@
     "build-storybook": "storybook build",
     "test": "jest",
     "ci": "tsc && next lint && jest",
-    "playwright": "playwright test"
+    "playwright": "playwright test",
+    "format": "prettier ./src --write"
   },
   "dependencies": {
     "@types/node": "20.4.0",
